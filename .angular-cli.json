@@ -25,11 +25,13 @@
       "prefix": "app",
       "styles": [
         "styles.css",
+        "../node_modules/bootstrap/dist/css/bootstrap.min.css",
         "../node_modules/reveal.js/css/reveal.css",
         "../node_modules/reveal.js/css/theme/night.css"
       ],
       "scripts": [
-        "../node_modules/reveal.js/js/reveal.js"
+        "../node_modules/reveal.js/js/reveal.js",
+        "../node_modules/bootstrap/dist/js/bootstrap.min.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
