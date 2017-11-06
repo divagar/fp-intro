@@ -8,7 +8,7 @@ import * as Reveal from 'reveal.js';
 })
 export class AppComponent {
 
-  editorOptions = {
+  mEditorOptions = {
     theme: 'vs-dark',
     language: 'javascript',
     autoIndent: true,
@@ -18,7 +18,25 @@ export class AppComponent {
     minimap: {enabled: false},
     scrollbar: {vertical: 'hidden', verticalScrollbarSize: '1px'}
   }
+
+  mEditorOutOptions = {
+    theme: 'vs-dark',
+    language: 'html',
+    autoIndent: true,
+    fontSize: '20px',
+    fontWeight: 400,
+    lineNumbers: 'off',
+    minimap: {enabled: false},
+    scrollbar: {vertical: 'hidden', verticalScrollbarSize: '1px'}
+  }
+
   code: string = 'function greetings(message) { return \'Hello \' + message; } \
+  \nconsole.oLog = console.log;\
+  \nconsole.log = function(val)\
+  \n{\
+  \n    console.oLog(value);\
+  \n    return val;\
+  \n}\
   \n\nvar morningGreeting = greetings(\'Good morning\');\
   \nvar noonGreeting = greetings(\'Good afternoon\');\
   \nvar eveningGreeting = greetings(\'Good evening\');\
