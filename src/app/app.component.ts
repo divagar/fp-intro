@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import * as Reveal from 'reveal.js';
 
 @Component({
@@ -15,8 +16,8 @@ export class AppComponent {
     fontSize: '20px',
     fontWeight: 400,
     lineNumbers: 'off',
-    minimap: {enabled: false},
-    scrollbar: {vertical: 'hidden', verticalScrollbarSize: '1px'}
+    minimap: { enabled: false },
+    scrollbar: { vertical: 'hidden', verticalScrollbarSize: '1px' }
   }
 
   mEditorOutOptions = {
@@ -26,24 +27,21 @@ export class AppComponent {
     fontSize: '20px',
     fontWeight: 400,
     lineNumbers: 'off',
-    minimap: {enabled: false},
-    scrollbar: {vertical: 'hidden', verticalScrollbarSize: '1px'}
+    minimap: { enabled: false },
+    scrollbar: { vertical: 'hidden', verticalScrollbarSize: '1px' }
   }
 
-  code: string = 'function greetings(message) { return \'Hello \' + message; } \
-  \nconsole.oLog = console.log;\
-  \nconsole.log = function(val)\
-  \n{\
-  \n    console.oLog(value);\
-  \n    return val;\
-  \n}\
-  \n\nvar morningGreeting = greetings(\'Good morning\');\
-  \nvar noonGreeting = greetings(\'Good afternoon\');\
-  \nvar eveningGreeting = greetings(\'Good evening\');\
-  \n\
-  \nconsole.log(morningGreeting);\
-  \nconsole.log(noonGreeting);\
-  \nconsole.log(eveningGreeting);';
+  gistUrl: string = "https://gist.githubusercontent.com/divagar/";
+  mainCode: string;
+  consoleCode: string;
+  consoleOutput: string;
+
+  constructor(private http: HttpClient) {
+    this.getCode();
+    this.getConsoleCode();
+    eval(this.consoleCode);
+  }
+
 
   ngOnInit() {
     // Full list of configuration options available at:
@@ -65,6 +63,35 @@ export class AppComponent {
       //   }
       // ]
     });
+  }
+
+  getCode() {
+    var url = this.gistUrl + 'e2b30c282780abaa7d3d3c3cbe4fee17' + '/raw';
+    this.http.get(url, { responseType: 'text' }).subscribe(
+      data => {
+        this.mainCode = data;
+      },
+      (err: HttpErrorResponse) => {
+        console.log("Error occured.", err)
+      }
+    );
+  }
+
+  getConsoleCode() {
+    var url = this.gistUrl + 'b4458e960e2cde5d54e3337b54601126' + '/raw';
+    this.http.get(url, { responseType: 'text' }).subscribe(
+      data => {
+        this.consoleCode = data;
+      },
+      (err: HttpErrorResponse) => {
+        console.log("Error occured.", err)
+      }
+    );
+  }
+
+  run() {
+    var codeToRun = this.consoleCode + this.mainCode;
+    this.consoleOutput = eval(codeToRun);
   }
 
 }

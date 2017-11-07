@@ -11,9 +11,9 @@
     <section>Slide 9</section>
     <section>Slide 10</section>
     <section>
-      <ngx-monaco-editor class="mEditor" [options]="mEditorOptions" [(ngModel)]="code"></ngx-monaco-editor>
-      <button type="button" class="btn btn-success run" (click)="run()">Run</button>
-      <ngx-monaco-editor class="mEditorOut" [options]="mEditorOutOptions" [(ngModel)]="out"></ngx-monaco-editor>
+      <ngx-monaco-editor class="mEditor" [options]="mEditorOptions" [(ngModel)]="mainCode"></ngx-monaco-editor>
+      <button type="button" class="btn btn-success run" (click)="run()">Run</button><br/>
+      <ngx-monaco-editor class="mEditorOut" [options]="mEditorOutOptions" [(ngModel)]="consoleOutput"></ngx-monaco-editor>
     </section>
   </div>
 </div>
