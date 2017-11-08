@@ -31,37 +31,37 @@ export class AppComponent {
     scrollbar: { vertical: 'hidden', verticalScrollbarSize: '1px' }
   }
 
-  gistUrl: string = "https://gist.githubusercontent.com/divagar/";
-  mainCode: string;
+  gistUrl: string = 'https://gist.githubusercontent.com/divagar/';
   consoleCode: string;
+
+  mainCode: string;
   consoleOutput: string;
 
   constructor(private http: HttpClient) {
-    this.getCode();
-    this.getConsoleCode();
-    eval(this.consoleCode);
+    // this.getCode();
+    // this.getConsoleCode();
+    // eval(this.consoleCode);
   }
 
-
   ngOnInit() {
-    // Full list of configuration options available at:
-    // https://github.com/hakimel/reveal.js#configuration
+
+    var that = this;
     Reveal.initialize({
       controls: true,
       progress: true,
       history: true,
       center: true,
       transition: 'slide', // none/fade/slide/convex/concave/zoom
-      //Optional reveal.js plugins
-      // dependencies: [
-      //   {
-      //     src: '../../node_modules/reveal.js/plugin/highlight/highlight.js', async: true, callback: function () {
-      //       [].forEach.call(document.querySelectorAll('.highlight, pre code'), function (v, i) {
-      //         //hljs.highlightBlock(v);
-      //       });
-      //     }
-      //   }
-      // ]
+    });
+
+    Reveal.addEventListener('slidechanged', function (event) {
+      // event.previousSlide, event.currentSlide, event.indexh, event.indexv
+      console.log(event.indexh);
+      if (event.indexh == 0) {
+        that.getCode();
+        that.getConsoleCode();
+        eval(that.consoleCode);
+      }
     });
   }
 
