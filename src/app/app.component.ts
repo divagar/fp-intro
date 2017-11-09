@@ -13,11 +13,11 @@ export class AppComponent {
 
   ngOnInit() {
     Reveal.initialize({
-      controls: true,
+      controls: false,
       progress: true,
       history: true,
       center: true,
-      transition: 'slide', // none/fade/slide/convex/concave/zoom
+      transition: 'concave', // none/fade/slide/convex/concave/zoom
     });
   }
 }

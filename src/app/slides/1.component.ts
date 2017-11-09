@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import * as Reveal from 'reveal.js';
+import * as appConfig from '../../../config.json';
 
 @Component({
     selector: 'app-slide1',
@@ -10,68 +11,30 @@ import * as Reveal from 'reveal.js';
 
 export class Slide1Component {
 
-    mEditorOptions = {
-        theme: 'vs-dark',
-        language: 'javascript',
-        autoIndent: true,
-        fontSize: '20px',
-        fontWeight: 400,
-        lineNumbers: 'off',
-        minimap: { enabled: false },
-        scrollbar: { vertical: 'hidden', verticalScrollbarSize: '1px' }
-    }
-
-    mEditorOutOptions = {
-        theme: 'vs-dark',
-        language: 'html',
-        autoIndent: true,
-        fontSize: '20px',
-        fontWeight: 400,
-        lineNumbers: 'off',
-        minimap: { enabled: false },
-        scrollbar: { vertical: 'hidden', verticalScrollbarSize: '1px' }
-    }
-
-    gistUrl: string = 'https://gist.githubusercontent.com/divagar/';
-    consoleCode: string;
-
+    gistUrl: string;
     mainCode: string;
+    consoleCode: string;
     consoleOutput: string;
+    jsEditorOptions = {};
+    htmlEditorOptions = {};
 
     constructor(private http: HttpClient) {
-        this.getCode();
-        this.getConsoleCode();
-        eval(this.consoleCode);
+        this.gistUrl = (<any>appConfig).gist.apiUrl;
+        this.initEditor();
     }
 
     ngOnInit() {
         var that = this;
         Reveal.addEventListener('slide1', function () {
-            that.mEditorOptions = {
-                theme: 'vs-dark',
-                language: 'javascript',
-                autoIndent: true,
-                fontSize: '20px',
-                fontWeight: 400,
-                lineNumbers: 'off',
-                minimap: { enabled: false },
-                scrollbar: { vertical: 'hidden', verticalScrollbarSize: '1px' }
-            }
-
-            that.mEditorOutOptions = {
-                theme: 'vs-dark',
-                language: 'html',
-                autoIndent: true,
-                fontSize: '20px',
-                fontWeight: 400,
-                lineNumbers: 'off',
-                minimap: { enabled: false },
-                scrollbar: { vertical: 'hidden', verticalScrollbarSize: '1px' }
-            }
-            that.getCode();
-            that.getConsoleCode();
-            eval(that.consoleCode);
+            that.initEditor();
         }, false);
+    }
+
+    initEditor() {
+        this.jsEditorOptions = Object.assign({}, (<any>appConfig).jsEditorOptions);
+        this.htmlEditorOptions = Object.assign({}, (<any>appConfig).htmlEditorOptions);
+        this.getCode();
+        this.getConsoleCode();
     }
 
     getCode() {
