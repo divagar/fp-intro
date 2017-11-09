@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpService } from '../app.http.service';
 import * as Reveal from 'reveal.js';
 import * as appConfig from '../../../config.json';
 
@@ -18,7 +19,8 @@ export class Slide1Component {
     jsEditorOptions = {};
     htmlEditorOptions = {};
 
-    constructor(private http: HttpClient) {
+    constructor(private http: HttpClient,
+                private httpService: HttpService) {
         this.gistUrl = (<any>appConfig).gist.apiUrl;
         this.initEditor();
     }
@@ -39,25 +41,17 @@ export class Slide1Component {
 
     getCode() {
         var url = this.gistUrl + 'e2b30c282780abaa7d3d3c3cbe4fee17' + '/raw';
-        this.http.get(url, { responseType: 'text' }).subscribe(
-            data => {
-                this.mainCode = data;
-            },
-            (err: HttpErrorResponse) => {
-                console.log("Error occured.", err)
-            }
+        this.httpService.get(url).subscribe(
+            (val) => { this.mainCode = val },
+            (err) => { console.log(err)}
         );
     }
 
     getConsoleCode() {
         var url = this.gistUrl + 'b4458e960e2cde5d54e3337b54601126' + '/raw';
-        this.http.get(url, { responseType: 'text' }).subscribe(
-            data => {
-                this.consoleCode = data;
-            },
-            (err: HttpErrorResponse) => {
-                console.log("Error occured.", err)
-            }
+        this.httpService.get(url).subscribe(
+            (val) => { this.consoleCode = val },
+            (err) => { console.log(err)}
         );
     }
 

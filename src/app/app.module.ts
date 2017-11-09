@@ -3,8 +3,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 
-import { AppComponent } from './app.component';
 import { MonacoEditorModule } from 'ngx-monaco-editor';
+
+import { HttpService } from './app.http.service';
+import { AppComponent } from './app.component';
 import { Slide1Component } from './slides/1.component';
 
 @NgModule({
@@ -18,7 +20,9 @@ import { Slide1Component } from './slides/1.component';
     HttpClientModule,
     MonacoEditorModule
   ],
-  providers: [],
+  providers: [
+    HttpService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
