@@ -17,7 +17,8 @@ export class AppComponent {
       progress: true,
       history: true,
       center: true,
-      transition: 'concave', // none/fade/slide/convex/concave/zoom
+      transition: 'concave',
+      transitionSpeed: 'fast'
     });
   }
 }
