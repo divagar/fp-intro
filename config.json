@@ -1,0 +1,25 @@
+{
+    "gist": {
+        "apiUrl": "https://gist.githubusercontent.com/divagar/"
+    },
+    "jsEditorOptions": {
+        "theme": "vs-dark",
+        "language": "javascript",
+        "autoIndent": true,
+        "fontSize": "20px",
+        "fontWeight": 400,
+        "lineNumbers": "off",
+        "minimap": { "enabled": false },
+        "scrollbar": { "vertical": "hidden", "verticalScrollbarSize": "1px" }
+    },
+    "htmlEditorOptions": {
+        "theme": "vs-dark",
+        "language": "html",
+        "autoIndent": true,
+        "fontSize": "20px",
+        "fontWeight": 400,
+        "lineNumbers": "off",
+        "minimap": { "enabled": false },
+        "scrollbar": { "vertical": "hidden", "verticalScrollbarSize": "1px" }
+    }
+}
