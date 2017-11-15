@@ -8,11 +8,13 @@ import { MonacoEditorModule } from 'ngx-monaco-editor';
 import { HttpService } from './app.http.service';
 import { AppComponent } from './app.component';
 import { PureFunctionsComponent } from './slides/pure.functions.component';
+import { CurryingComponent } from './slides/currying.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PureFunctionsComponent
+    PureFunctionsComponent,
+    CurryingComponent
   ],
   imports: [
     BrowserModule,
