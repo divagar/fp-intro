@@ -1,13 +1,11 @@
 .mEditor {
     height: 300px;
-    width: 700px;
     text-align: left;
     font-size: 40px;
     overflow: hidden;
 }
 .mEditorOut {
     height: 300px;
-    width: 700px;
     text-align: left;
     font-size: 40px;
     overflow: hidden;
@@ -19,3 +17,17 @@
     margin-left: 10px;
     margin-top: 10px;
 }
+
+.yellow {
+    color: #F8DC3D;
+}
+
+.eWrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 5px;
+  }
+
+.eBox {
+    padding: 5px;
+  }

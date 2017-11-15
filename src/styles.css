@@ -2,3 +2,11 @@
 .reveal {
     font-family: 'Quicksand', sans-serif !important;
 }
+
+.reveal .slides {
+    width: 1280px !important;
+}
+
+.yellow {
+    color: #F8DC3D !important;
+}
