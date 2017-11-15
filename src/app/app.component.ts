@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { HttpService } from './app.http.service';
 import * as Reveal from 'reveal.js';
+import * as appConfig from '../../config.json';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +10,11 @@ import * as Reveal from 'reveal.js';
 })
 
 export class AppComponent {
-  constructor() {
+
+  gistUrl: string;
+
+  constructor(private httpService: HttpService) {
+    this.gistUrl = (<any>appConfig).gist.apiUrl;
   }
 
   ngOnInit() {
@@ -20,5 +26,15 @@ export class AppComponent {
       transition: 'concave',
       transitionSpeed: 'fast'
     });
+
+    this.getConsoleCode();
+  }
+
+  getConsoleCode() {
+    var url = this.gistUrl + 'b4458e960e2cde5d54e3337b54601126' + '/raw';
+    this.httpService.get(url).subscribe(
+      (val) => { eval(val) },
+      (err) => { console.log(err) }
+    );
   }
 }

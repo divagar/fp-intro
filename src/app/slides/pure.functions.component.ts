@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { HttpService } from '../app.http.service';
 import * as Reveal from 'reveal.js';
 import * as appConfig from '../../../config.json';
@@ -19,8 +18,7 @@ export class PureFunctionsComponent {
     jsEditorOptions = {};
     htmlEditorOptions = {};
 
-    constructor(private http: HttpClient,
-                private httpService: HttpService) {
+    constructor(private httpService: HttpService) {
         this.gistUrl = (<any>appConfig).gist.apiUrl;
         this.initEditor();
     }
@@ -36,7 +34,6 @@ export class PureFunctionsComponent {
         this.jsEditorOptions = Object.assign({}, (<any>appConfig).jsEditorOptions);
         this.htmlEditorOptions = Object.assign({}, (<any>appConfig).htmlEditorOptions);
         this.getCode();
-        this.getConsoleCode();
     }
 
     getCode() {
@@ -47,17 +44,8 @@ export class PureFunctionsComponent {
         );
     }
 
-    getConsoleCode() {
-        var url = this.gistUrl + 'b4458e960e2cde5d54e3337b54601126' + '/raw';
-        this.httpService.get(url).subscribe(
-            (val) => { this.consoleCode = val },
-            (err) => { console.log(err)}
-        );
-    }
-
     run() {
-        var codeToRun = this.consoleCode + this.mainCode;
-        this.consoleOutput = eval(codeToRun);
+        this.consoleOutput = eval(this.mainCode);
     }
 
 }
