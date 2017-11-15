@@ -1,0 +1,17 @@
+<div>
+    <h3>High Order Function</h3>
+    <p class='yellow'>Functions which take functions as input or return functions as output</p>
+</div>
+
+<div class="eWrapper">
+    <div class="eBox">
+        <ngx-monaco-editor class="mEditor" [options]="jsEditorOptions" [(ngModel)]="mainCode">
+        </ngx-monaco-editor>
+        <button type="button" class="btn btn-success run" (click)="run()">Run</button>
+        <br/>
+    </div>
+    <div class="eBox">
+        <ngx-monaco-editor class="mEditorOut" [options]="htmlEditorOptions" [(ngModel)]="consoleOutput">
+        </ngx-monaco-editor>
+    </div>
+</div>

@@ -9,12 +9,14 @@ import { HttpService } from './app.http.service';
 import { AppComponent } from './app.component';
 import { PureFunctionsComponent } from './slides/pure.functions.component';
 import { CurryingComponent } from './slides/currying.component';
+import { HOFComponent } from './slides/hof.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PureFunctionsComponent,
-    CurryingComponent
+    CurryingComponent,
+    HOFComponent
   ],
   imports: [
     BrowserModule,
