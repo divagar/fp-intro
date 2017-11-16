@@ -37,7 +37,7 @@ export class HOFComponent {
     }
 
     getCode() {
-        var url = this.gistUrl + '67ae60ff62f34216b3a88b01623ba291' + '/raw';
+        var url = this.gistUrl + '124de8bf19269466819dccc6c11fec75' + '/raw';
         this.httpService.get(url).subscribe(
             (val) => { this.mainCode = val },
             (err) => { console.log(err)}
