@@ -11,17 +11,14 @@ import * as appConfig from '../../../config.json';
 
 export class PureFunctionsComponent {
 
-    gistId: string;
     gistUrl: string;
     mainCode: string;
-    consoleCode: string;
     consoleOutput: string;
     jsEditorOptions = {};
     htmlEditorOptions = {};
 
     constructor(private httpService: HttpService) {
         this.gistUrl = (<any>appConfig).gist.apiUrl;
-        this.gistId = 'e2b30c282780abaa7d3d3c3cbe4fee17';
         this.initEditor();
     }
 
@@ -29,21 +26,25 @@ export class PureFunctionsComponent {
         var that = this;
         Reveal.addEventListener('slide_pf', function () {
             that.initEditor();
+            that.getCode('e2b30c282780abaa7d3d3c3cbe4fee17').then(
+                (val) => that.mainCode = String(val)
+            );
         }, false);
     }
 
     initEditor() {
         this.jsEditorOptions = Object.assign({}, (<any>appConfig).jsEditorOptions);
         this.htmlEditorOptions = Object.assign({}, (<any>appConfig).htmlEditorOptions);
-        this.getCode(this.gistId);
     }
 
     getCode(gistId) {
         var url = this.gistUrl + gistId + '/raw';
-        this.httpService.get(url).subscribe(
-            (val) => { this.mainCode = val },
-            (err) => { console.log(err)}
-        );
+        return new Promise((resolve, reject) => {
+            this.httpService.get(url).subscribe(
+                (val) => { resolve(val); },
+                (err) => { reject(err) }
+            );
+        })
     }
 
     run() {

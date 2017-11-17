@@ -13,7 +13,6 @@ export class MRComponent {
 
     gistUrl: string;
     mainCode: string;
-    consoleCode: string;
     consoleOutput: string;
     jsEditorOptions = {};
     htmlEditorOptions = {};
@@ -27,21 +26,25 @@ export class MRComponent {
         var that = this;
         Reveal.addEventListener('slide_mr', function () {
             that.initEditor();
+            that.getCode('962e76ccef7dd8703c1365fa9388124e').then(
+                (val) => that.mainCode = String(val)
+            );
         }, false);
     }
 
     initEditor() {
         this.jsEditorOptions = Object.assign({}, (<any>appConfig).jsEditorOptions);
         this.htmlEditorOptions = Object.assign({}, (<any>appConfig).htmlEditorOptions);
-        this.getCode();
     }
 
-    getCode() {
-        var url = this.gistUrl + '124de8bf19269466819dccc6c11fec75' + '/raw';
-        this.httpService.get(url).subscribe(
-            (val) => { this.mainCode = val },
-            (err) => { console.log(err)}
-        );
+    getCode(gistId) {
+        var url = this.gistUrl + gistId + '/raw';
+        return new Promise((resolve, reject) => {
+            this.httpService.get(url).subscribe(
+                (val) => { resolve(val); },
+                (err) => { reject(err) }
+            );
+        })
     }
 
     run() {
