@@ -30,6 +30,18 @@ export class MRComponent {
                 (val) => that.mainCode = String(val)
             );
         }, false);
+        Reveal.addEventListener('slide_mr_1', function () {
+            that.initEditor();
+            that.getCode('db012916dd89f58fdc032e4cb3ed898b').then(
+                (val) => that.mainCode = String(val)
+            );
+        }, false);
+        Reveal.addEventListener('slide_mr_2', function () {
+            that.initEditor();
+            that.getCode('deb73a0eddceaa84f2d7502ba44520ba').then(
+                (val) => that.mainCode = String(val)
+            );
+        }, false);
     }
 
     initEditor() {

@@ -48,7 +48,7 @@ export class CurryingComponent {
     }
 
     run() {
-        this.consoleOutput = eval(this.mainCode);
+        this.consoleOutput = eval("_out =''"+this.mainCode);
     }
 
 }

@@ -1,6 +1,5 @@
 <section data-state='slide_mr'>
     <div>
-        <h3></h3>
         <p class='yellow'>Let’s dive into some more examples</p>
     </div>
     <ngx-monaco-editor class="mEditor" [options]="jsEditorOptions" [(ngModel)]="mainCode">
@@ -8,11 +7,37 @@
 </section>
 
 <section data-state='slide_mr_1'>
-    <ngx-monaco-editor class="mEditor" [options]="jsEditorOptions" [(ngModel)]="mainCode_1">
-    </ngx-monaco-editor>
+    <div>
+        <p class='yellow'>Using a for-loop we would write something like this</p>
+    </div>
+    <div class="eWrapper">
+        <div class="eBox">
+            <ngx-monaco-editor class="mEditor" [options]="jsEditorOptions" [(ngModel)]="mainCode">
+            </ngx-monaco-editor>
+            <button type="button" class="btn btn-success run" (click)="run()">Run</button>
+            <br/>
+        </div>
+        <div class="eBox">
+            <ngx-monaco-editor class="mEditorOut" [options]="htmlEditorOptions" [(ngModel)]="consoleOutput">
+            </ngx-monaco-editor>
+        </div>
+    </div>
 </section>
 
 <section data-state='slide_mr_2'>
-    <ngx-monaco-editor class="mEditor" [options]="jsEditorOptions" [(ngModel)]="mainCode_2">
-    </ngx-monaco-editor>
+    <div>
+        <p class='yellow'>Using a Higher Order Funcations like Map and Reduce</p>
+    </div>
+    <div class="eWrapper">
+        <div class="eBox">
+            <ngx-monaco-editor class="mEditor" [options]="jsEditorOptions" [(ngModel)]="mainCode">
+            </ngx-monaco-editor>
+            <button type="button" class="btn btn-success run" (click)="run()">Run</button>
+            <br/>
+        </div>
+        <div class="eBox">
+            <ngx-monaco-editor class="mEditorOut" [options]="htmlEditorOptions" [(ngModel)]="consoleOutput">
+            </ngx-monaco-editor>
+        </div>
+    </div>
 </section>
