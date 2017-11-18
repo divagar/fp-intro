@@ -4,7 +4,7 @@ import * as Reveal from 'reveal.js';
 import * as appConfig from '../../../config.json';
 
 @Component({
-    selector: 'app-curry',
+    selector: '[app-curry]',
     templateUrl: './currying.component.html',
     styleUrls: ['./slides.component.css']
 })
@@ -48,7 +48,7 @@ export class CurryingComponent {
     }
 
     run() {
-        this.consoleOutput = eval("_out =''"+this.mainCode);
+        this.consoleOutput = eval(this.mainCode);
     }
 
 }

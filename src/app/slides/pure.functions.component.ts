@@ -4,7 +4,7 @@ import * as Reveal from 'reveal.js';
 import * as appConfig from '../../../config.json';
 
 @Component({
-    selector: 'app-pf',
+    selector: '[app-pf]',
     templateUrl: './pure.functions.component.html',
     styleUrls: ['./slides.component.css']
 })

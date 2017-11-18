@@ -13,7 +13,11 @@ export class MRComponent {
 
     gistUrl: string;
     mainCode: string;
+    mainCode_1: string;
+    mainCode_2: string;
     consoleOutput: string;
+    consoleOutput_1: string;
+    consoleOutput_2: string;
     jsEditorOptions = {};
     htmlEditorOptions = {};
 
@@ -33,13 +37,13 @@ export class MRComponent {
         Reveal.addEventListener('slide_mr_1', function () {
             that.initEditor();
             that.getCode('db012916dd89f58fdc032e4cb3ed898b').then(
-                (val) => that.mainCode = String(val)
+                (val) => that.mainCode_1 = String(val)
             );
         }, false);
         Reveal.addEventListener('slide_mr_2', function () {
             that.initEditor();
             that.getCode('deb73a0eddceaa84f2d7502ba44520ba').then(
-                (val) => that.mainCode = String(val)
+                (val) => that.mainCode_2 = String(val)
             );
         }, false);
     }
@@ -61,6 +65,14 @@ export class MRComponent {
 
     run() {
         this.consoleOutput = eval(this.mainCode);
+    }
+
+    run_1() {
+        this.consoleOutput_1 = eval(this.mainCode_1);
+    }
+
+    run_2() {
+        this.consoleOutput_2 = eval(this.mainCode_2);
     }
 
 }
