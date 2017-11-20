@@ -7,6 +7,7 @@ import { MonacoEditorModule } from 'ngx-monaco-editor';
 
 import { HttpService } from './app.http.service';
 import { AppComponent } from './app.component';
+import { FunctionComponent } from './slides/function.component';
 import { PureFunctionsComponent } from './slides/pure.functions.component';
 import { CurryingComponent } from './slides/currying.component';
 import { HOFComponent } from './slides/hof.component';
@@ -15,6 +16,7 @@ import { MRComponent } from './slides/mapreduce.component';
 @NgModule({
   declarations: [
     AppComponent,
+    FunctionComponent,
     PureFunctionsComponent,
     CurryingComponent,
     HOFComponent,
