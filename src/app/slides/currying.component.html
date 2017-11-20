@@ -1,16 +1,24 @@
-<div>
-    <h3>Curried Function</h3>
-    <p class='yellow'>A function that will return a new function until it receives all its arguments</p>
-</div>
+<section>
+    <div>
+        <h3 class='yellow'>Curried Function</h3>
+    </div>
+</section>
 
-<div class="eWrapper">
-    <div class="eBox">
-        <ngx-monaco-editor class="mEditor" [options]="jsEditorOptions" [(ngModel)]="mainCode">
-        </ngx-monaco-editor>
-        <button type="button" class="btn btn-success run" (click)="run()">Run</button>
-        <br/>
+<section data-state='slide_curry'>
+    <div>
+        <h3></h3>
+        <p class='yellow'>A function that will return a new function until it receives all its arguments</p>
     </div>
-    <div class="eBox">
-        <ngx-monaco-editor class="mEditorOut" [options]="htmlEditorOptions" [(ngModel)]="consoleOutput">
-        </ngx-monaco-editor>
+    <div class="eWrapper">
+        <div class="eBox">
+            <ngx-monaco-editor class="mEditor" [options]="jsEditorOptions" [(ngModel)]="mainCode">
+            </ngx-monaco-editor>
+            <button type="button" class="btn btn-success run" (click)="run()">Run</button>
+            <br/>
+        </div>
+        <div class="eBox">
+            <ngx-monaco-editor class="mEditorOut" [options]="htmlEditorOptions" [(ngModel)]="consoleOutput">
+            </ngx-monaco-editor>
+        </div>
     </div>
+</section>
