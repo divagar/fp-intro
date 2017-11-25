@@ -6,6 +6,7 @@ import { NgModule } from '@angular/core';
 import { MonacoEditorModule } from 'ngx-monaco-editor';
 
 import { HttpService } from './app.http.service';
+import { LSService } from './app.ls.service';
 import { AppComponent } from './app.component';
 import { CategoryComponent } from './slides/category.component';
 import { FunctionComponent } from './slides/function.component';
@@ -34,7 +35,8 @@ import { ComposeComponent } from './slides/compose.component';
     MonacoEditorModule
   ],
   providers: [
-    HttpService
+    HttpService,
+    LSService
   ],
   bootstrap: [AppComponent]
 })
