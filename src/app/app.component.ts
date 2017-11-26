@@ -37,4 +37,14 @@ export class AppComponent {
       (err) => { console.log(err) }
     );
   }
+
+  fpEval(code: string) {
+    var url = this.gistUrl + 'b4458e960e2cde5d54e3337b54601126' + '/raw';
+    return new Promise((resolve, reject) => {
+      this.httpService.get(url).subscribe(
+        (val) => { resolve(eval(val + code)); },
+        (err) => { reject(err) }
+      );
+    })
+  }
 }

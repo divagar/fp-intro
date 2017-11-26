@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AppComponent } from '../app.component';
 import { HttpService } from '../app.http.service';
 import * as Reveal from 'reveal.js';
 import * as appConfig from '../../../config.json';
@@ -17,7 +18,8 @@ export class HOFComponent {
     jsEditorOptions = {};
     htmlEditorOptions = {};
 
-    constructor(private httpService: HttpService) {
+    constructor(private httpService: HttpService,
+                private appCom: AppComponent) {
         this.gistUrl = (<any>appConfig).gist.apiUrl;
         this.initEditor();
     }
@@ -48,7 +50,9 @@ export class HOFComponent {
     }
 
     run() {
-        this.consoleOutput = eval(this.mainCode);
+        this.appCom.fpEval(this.mainCode).then(
+            (val) => this.consoleOutput = String(val)
+        );
     }
 
 }

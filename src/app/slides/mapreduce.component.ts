@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpService } from '../app.http.service';
+import { AppComponent } from '../app.component';
 import * as Reveal from 'reveal.js';
 import * as appConfig from '../../../config.json';
 
@@ -21,7 +22,8 @@ export class MRComponent {
     jsEditorOptions = {};
     htmlEditorOptions = {};
 
-    constructor(private httpService: HttpService) {
+    constructor(private httpService: HttpService,
+                private appCom: AppComponent) {
         this.gistUrl = (<any>appConfig).gist.apiUrl;
         this.initEditor();
     }
@@ -64,15 +66,18 @@ export class MRComponent {
     }
 
     run() {
-        this.consoleOutput = eval(this.mainCode);
+        this.appCom.fpEval(this.mainCode).then(
+            (val) => this.consoleOutput = String(val)
+        );
     }
-
     run_1() {
-        this.consoleOutput_1 = eval(this.mainCode_1);
+        this.appCom.fpEval(this.mainCode_1).then(
+            (val) => this.consoleOutput_1 = String(val)
+        );
     }
-
     run_2() {
-        this.consoleOutput_2 = eval(this.mainCode_2);
+        this.appCom.fpEval(this.mainCode_2).then(
+            (val) => this.consoleOutput_2 = String(val)
+        );
     }
-
 }
