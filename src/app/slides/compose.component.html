@@ -3,3 +3,28 @@
         <h3 class='yellow'>Function Composition</h3>
     </div>
 </section>
+
+<section>
+    <div>
+        <p class='yellow'>Function composition is simply stringing functions together. We feed the result of one function to the input of another.</p>
+        <img class='pfImg' src="../../assets/images/fun_comp.png">
+    </div>
+</section>
+
+<section data-state='slide_com'>
+    <div>
+        <p class='yellow'>Function Composition | Example</p>
+    </div>
+    <div class="eWrapper">
+        <div class="eBox">
+            <ngx-monaco-editor class="mEditor" [options]="jsEditorOptions" [(ngModel)]="mainCode">
+            </ngx-monaco-editor>
+            <button type="button" class="btn btn-success run" (click)="run()">Run</button>
+            <br/>
+        </div>
+        <div class="eBox">
+            <ngx-monaco-editor class="mEditorOut" [options]="htmlEditorOptions" [(ngModel)]="consoleOutput">
+            </ngx-monaco-editor>
+        </div>
+    </div>
+</section>
