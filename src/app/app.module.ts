@@ -14,6 +14,7 @@ import { HOFComponent } from './slides/hof.component';
 import { MRComponent } from './slides/mapreduce.component';
 import { CurryingComponent } from './slides/currying.component';
 import { ComposeComponent } from './slides/compose.component';
+import { FunctorComponent } from './slides/functor.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { ComposeComponent } from './slides/compose.component';
     HOFComponent,
     MRComponent,
     CurryingComponent,
-    ComposeComponent
+    ComposeComponent,
+    FunctorComponent
   ],
   imports: [
     BrowserModule,
