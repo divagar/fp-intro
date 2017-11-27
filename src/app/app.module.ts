@@ -15,7 +15,7 @@ import { MRComponent } from './slides/mapreduce.component';
 import { CurryingComponent } from './slides/currying.component';
 import { ComposeComponent } from './slides/compose.component';
 import { FunctorComponent } from './slides/functor.component';
-
+import { ApplicativeComponent } from './slides/applicative.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +27,8 @@ import { FunctorComponent } from './slides/functor.component';
     MRComponent,
     CurryingComponent,
     ComposeComponent,
-    FunctorComponent
+    FunctorComponent,
+    ApplicativeComponent
   ],
   imports: [
     BrowserModule,

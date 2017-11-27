@@ -93,3 +93,14 @@
     border: none !important;
     margin-top: 10px !important;
 }
+.functorImg {
+    height: 300px;
+    background: none !important;
+    border: none !important;
+    margin-top: 10px !important;
+}
+.applicativeWrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 300px;
+}
