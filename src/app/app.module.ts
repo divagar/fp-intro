@@ -16,6 +16,7 @@ import { CurryingComponent } from './slides/currying.component';
 import { ComposeComponent } from './slides/compose.component';
 import { FunctorComponent } from './slides/functors.component';
 import { ApplicativeComponent } from './slides/applicatives.component';
+import { MonadComponent } from './slides/monads.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ApplicativeComponent } from './slides/applicatives.component';
     CurryingComponent,
     ComposeComponent,
     FunctorComponent,
-    ApplicativeComponent
+    ApplicativeComponent,
+    MonadComponent
   ],
   imports: [
     BrowserModule,

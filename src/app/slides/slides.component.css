@@ -22,6 +22,12 @@
     color: #F8DC3D;
 }
 
+section img {
+    background: none !important;
+    border: none !important;
+    margin-top: 10px !important;
+}
+
 .eWrapper {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -53,9 +59,6 @@
 .mrBox img {
     width: 100px;
     height: 100px;
-    background: none !important;
-    border: none !important;
-    margin-top: 10px !important;
 }
 .mrWrapperReducefn img {
     width: auto !important;
@@ -69,35 +72,26 @@
 .fn img {
     width: 300px;
     height: 190px;
-    background: none !important;
-    border: none !important;
-    margin-top: 10px !important;
 }
 .fnBox img {
     width: 200px;
     height: 190px;
-    background: none !important;
-    border: none !important;
-    margin-top: 10px !important;
 }
 
 .categoryImg {
     height: 250px;
-    background: none !important;
-    border: none !important;
-    margin-top: 10px !important;
 }
 .pfImg {
     height: 500px;
-    background: none !important;
-    border: none !important;
-    margin-top: 10px !important;
 }
 .functorImg {
     height: 300px;
-    background: none !important;
-    border: none !important;
-    margin-top: 10px !important;
+}
+.monadImg {
+    height: 410px;
+}
+.monadImg1 {
+    height: 510px;
 }
 .applicativeWrapper {
     display: grid;
