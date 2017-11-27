@@ -6,7 +6,7 @@ import * as appConfig from '../../../config.json';
 
 @Component({
     selector: '[app-applicative]',
-    templateUrl: './applicative.component.html',
+    templateUrl: './applicatives.component.html',
     styleUrls: ['./slides.component.css']
 })
 

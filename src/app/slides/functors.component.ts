@@ -6,7 +6,7 @@ import * as appConfig from '../../../config.json';
 
 @Component({
     selector: '[app-functor]',
-    templateUrl: './functor.component.html',
+    templateUrl: './functors.component.html',
     styleUrls: ['./slides.component.css']
 })
 
