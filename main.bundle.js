@@ -296,7 +296,7 @@ AppModule = __decorate([
 /***/ "../../../../../src/app/slides/category.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<section>\r\n    <div>\r\n        <h3 class='yellow'>Category Theory</h3>\r\n        <p>\r\n            How\r\n            <i>things</i> compose\r\n        </p>\r\n    </div>\r\n</section>\r\n\r\n<section>\r\n    <div>\r\n        <h3 class='yellow'>What is category ?</h3>\r\n        <img class='categoryImg' src=\"assets/images/category_1.png\">\r\n    </div>\r\n</section>"
+module.exports = "<section>\r\n    <div>\r\n        <h3 class='yellow'>Category Theory</h3>\r\n        <p>\r\n            How\r\n            <i>things</i> compose\r\n        </p>\r\n    </div>\r\n</section>\r\n\r\n<section>\r\n    <div>\r\n        <h3 class='yellow'>What is category ?</h3>\r\n        <img class='categoryImg' src=\"./assets/images/category_1.png\">\r\n    </div>\r\n</section>"
 
 /***/ }),
 
