@@ -45,7 +45,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"reveal\">\n  <div class=\"slides\">\n\n    <section class=\"slide_intro\" data-background=\"assets/images/fp_js.jpg\" data-background-size=\"100px\">\n      <div>\n        <h3>Introduction to Functional Programming</h3>\n      </div>\n    </section>\n\n    <section>\n      <div>\n        <h3 class='yellow'>Composition\n          <br/>Abstraction</h3>\n      </div>\n    </section>\n\n    <section>\n      <div>\n        <h3 class='yellow'>Functional Programming is a programming paradigm</h3>\n        <p>like imperative (procedural) programming or object oriented programming</p>\n      </div>\n    </section>\n\n    <section>\n      <div>\n        <h3 class='yellow'>ObjectOriented Programming</h3>\n        <p>\n          Composition of object\n          <br> Abstraction over the behaviour of each object\n        </p>\n      </div>\n    </section>\n\n    <section>\n      <div>\n        <h3 class='yellow'>Functional Programming (FP)</h3>\n        <p>\n          Composition of function\n          <br/> Abstraction over mathematical laws\n        </p>\n      </div>\n    </section>\n\n    <section app-cat data-state='slide_cat' class='slide_cat'>\n    </section>\n\n    <section app-fn data-state='slide_fn' class='slide_fn'>\n    </section>\n\n    <section app-pf class='slide_pf'>\n    </section>\n\n    <section app-hof class='slide_hof'>\n    </section>\n\n    <section app-mr class='slide_mr'>\n    </section>\n\n    <section app-curry class='slide_curry'>\n    </section>\n\n    <section app-com class='slide_com'>\n    </section>\n  </div>\n</div>"
+module.exports = "<div class=\"reveal\">\n  <div class=\"slides\">\n\n    <section class=\"slide_intro\" data-background=\"assets/images/fp_js.jpg\" data-background-size=\"100px\">\n      <div>\n        <h3>Introduction to Functional Programming</h3>\n      </div>\n    </section>\n\n    <section>\n      <div>\n        <h3 class='yellow'>Composition\n          <br/>Abstraction</h3>\n      </div>\n    </section>\n\n    <section>\n      <div>\n        <h3 class='yellow'>Functional Programming is a programming paradigm</h3>\n        <p>like imperative (procedural) programming or object oriented programming</p>\n      </div>\n    </section>\n\n    <section>\n      <div>\n        <h3 class='yellow'>ObjectOriented Programming</h3>\n        <p>\n          Composition of object\n          <br> Abstraction over the behaviour of each object\n        </p>\n      </div>\n    </section>\n\n    <section>\n      <div>\n        <h3 class='yellow'>Functional Programming</h3>\n        <p>\n          Composition of function\n          <br/> Abstraction over mathematical laws\n        </p>\n      </div>\n    </section>\n\n    <section app-cat data-state='slide_cat' class='slide_cat'>\n    </section>\n\n    <section app-fn data-state='slide_fn' class='slide_fn'>\n    </section>\n\n    <section app-pf class='slide_pf'>\n    </section>\n\n    <section app-hof class='slide_hof'>\n    </section>\n\n    <section app-mr class='slide_mr'>\n    </section>\n\n    <section app-curry class='slide_curry'>\n    </section>\n\n    <section app-com class='slide_com'>\n    </section>\n\n    <section app-functor class='slide_functor'>\n    </section>\n\n    <section app-applicative class='slide_applicative'>\n    </section>\n\n    <section app-monad class='slide_monad'>\n    </section>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -237,12 +237,18 @@ LSService = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__slides_mapreduce_component__ = __webpack_require__("../../../../../src/app/slides/mapreduce.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__slides_currying_component__ = __webpack_require__("../../../../../src/app/slides/currying.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__slides_compose_component__ = __webpack_require__("../../../../../src/app/slides/compose.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__slides_functors_component__ = __webpack_require__("../../../../../src/app/slides/functors.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__slides_applicatives_component__ = __webpack_require__("../../../../../src/app/slides/applicatives.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__slides_monads_component__ = __webpack_require__("../../../../../src/app/slides/monads.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
 
 
 
@@ -273,7 +279,10 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_11__slides_hof_component__["a" /* HOFComponent */],
             __WEBPACK_IMPORTED_MODULE_12__slides_mapreduce_component__["a" /* MRComponent */],
             __WEBPACK_IMPORTED_MODULE_13__slides_currying_component__["a" /* CurryingComponent */],
-            __WEBPACK_IMPORTED_MODULE_14__slides_compose_component__["a" /* ComposeComponent */]
+            __WEBPACK_IMPORTED_MODULE_14__slides_compose_component__["a" /* ComposeComponent */],
+            __WEBPACK_IMPORTED_MODULE_15__slides_functors_component__["a" /* FunctorComponent */],
+            __WEBPACK_IMPORTED_MODULE_16__slides_applicatives_component__["a" /* ApplicativeComponent */],
+            __WEBPACK_IMPORTED_MODULE_17__slides_monads_component__["a" /* MonadComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -290,6 +299,86 @@ AppModule = __decorate([
 ], AppModule);
 
 //# sourceMappingURL=app.module.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/slides/applicatives.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<section>\r\n    <div>\r\n        <h3 class='yellow'>Applicatives</h3>\r\n        <p>\r\n            Applicatives apply a wrapped function to a wrapped value\r\n        </p>\r\n    </div>\r\n</section>\r\n\r\n<section>\r\n    <div>\r\n        <p>Our values are wrapped in a container, just like Functors\r\n            <br> and our functions are wrapped in a container too!</p>\r\n        <div class='applicativeWrapper'>\r\n            <div class='fnBox'>\r\n                <img src=\"assets/images/functor_value_wrapper.png\">\r\n            </div>\r\n            <div class='fnBox'>\r\n                <img src=\"assets/images/applicative_fn_wrapper.png\">\r\n            </div>\r\n        </div>\r\n    </div>\r\n</section>\r\n\r\n<section>\r\n    <div>\r\n        <p>Applicatives | Behind the scenes</p>\r\n        <img class='functorImg' src=\"assets/images/applicative_in_action.png\">\r\n    </div>\r\n</section>\r\n\r\n<section data-state='slide_applicative'>\r\n    <div>\r\n        <h3></h3>\r\n        <p class='yellow'>Applicatives | Example</p>\r\n    </div>\r\n    <div class=\"eWrapper\">\r\n        <div class=\"eBox\">\r\n            <ngx-monaco-editor class=\"mEditor\" [options]=\"jsEditorOptions\" [(ngModel)]=\"mainCode\">\r\n            </ngx-monaco-editor>\r\n            <button type=\"button\" class=\"btn btn-success run\" (click)=\"run()\">Run</button>\r\n            <br/>\r\n        </div>\r\n        <div class=\"eBox\">\r\n            <ngx-monaco-editor class=\"mEditorOut\" [options]=\"htmlEditorOptions\" [(ngModel)]=\"consoleOutput\">\r\n            </ngx-monaco-editor>\r\n        </div>\r\n    </div>\r\n</section>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/slides/applicatives.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ApplicativeComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_http_service__ = __webpack_require__("../../../../../src/app/app.http.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_reveal_js__ = __webpack_require__("../../../../reveal.js/js/reveal.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_reveal_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_reveal_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__config_json__ = __webpack_require__("../../../../../config.json");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__config_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__config_json__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var ApplicativeComponent = (function () {
+    function ApplicativeComponent(httpService, appCom) {
+        this.httpService = httpService;
+        this.appCom = appCom;
+        this.jsEditorOptions = {};
+        this.htmlEditorOptions = {};
+        this.gistUrl = __WEBPACK_IMPORTED_MODULE_4__config_json__["gist"].apiUrl;
+        this.initEditor();
+    }
+    ApplicativeComponent.prototype.ngOnInit = function () {
+        var that = this;
+        __WEBPACK_IMPORTED_MODULE_3_reveal_js__["addEventListener"]('slide_applicative', function () {
+            that.initEditor();
+            that.getCode('40ff93efe1cbcf320e36be46d4fb7bff').then(function (val) { return that.mainCode = String(val); });
+        }, false);
+    };
+    ApplicativeComponent.prototype.initEditor = function () {
+        this.jsEditorOptions = Object.assign({}, __WEBPACK_IMPORTED_MODULE_4__config_json__["jsEditorOptions"]);
+        this.htmlEditorOptions = Object.assign({}, __WEBPACK_IMPORTED_MODULE_4__config_json__["htmlEditorOptions"]);
+    };
+    ApplicativeComponent.prototype.getCode = function (gistId) {
+        var _this = this;
+        var url = this.gistUrl + gistId + '/raw';
+        return new Promise(function (resolve, reject) {
+            _this.httpService.get(url).subscribe(function (val) { resolve(val); }, function (err) { reject(err); });
+        });
+    };
+    ApplicativeComponent.prototype.run = function () {
+        var _this = this;
+        this.appCom.fpEval(this.mainCode).then(function (val) { return _this.consoleOutput = String(val); });
+    };
+    return ApplicativeComponent;
+}());
+ApplicativeComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: '[app-applicative]',
+        template: __webpack_require__("../../../../../src/app/slides/applicatives.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/slides/slides.component.css")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__app_http_service__["a" /* HttpService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__app_http_service__["a" /* HttpService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__app_component__["a" /* AppComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__app_component__["a" /* AppComponent */]) === "function" && _b || Object])
+], ApplicativeComponent);
+
+var _a, _b;
+//# sourceMappingURL=applicatives.component.js.map
 
 /***/ }),
 
@@ -527,6 +616,86 @@ FunctionComponent = __decorate([
 
 /***/ }),
 
+/***/ "../../../../../src/app/slides/functors.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<section>\r\n    <div>\r\n        <h3 class='yellow'>Functors</h3>\r\n        <p>\r\n            A functor is a <i>type</i> you can map over.<br/>\r\n            Functors apply a function to a wrapped value\r\n        </p>\r\n    </div>\r\n</section>\r\n\r\n<section>\r\n    <div>\r\n        <p>Let' take a simple value</p>\r\n        <img class='functorImg' src=\"assets/images/functor_value.png\">\r\n    </div>\r\n</section>\r\n\r\n<section>\r\n    <div>\r\n        <p>We know how to apply a function to this value</p>\r\n        <img class='functorImg' src=\"assets/images/functor_value_fun.png\">\r\n    </div>\r\n</section>\r\n\r\n<section>\r\n    <div>\r\n        <p>Introducing container</p>\r\n        <img class='functorImg' src=\"assets/images/functor_value_wrapper.png\">\r\n    </div>\r\n</section>\r\n\r\n<section>\r\n    <div>\r\n        <p>You can’t apply a normal function to the container</p>\r\n        <img class='functorImg' src=\"assets/images/functor_value_wrapper_normal_fun.png\">\r\n    </div>\r\n</section>\r\n\r\n<section>\r\n    <div>\r\n        <p>You need Map function</p>\r\n        <img class='functorImg' src=\"assets/images/functor_value_wrapper_map.png\">\r\n    </div>\r\n</section>\r\n\r\n<section>\r\n    <div>\r\n        <p>Map | Behind the scenes</p>\r\n        <img class='functorImg' src=\"assets/images/functor_value_wrapper_map_in_detail.png\">\r\n    </div>\r\n</section>\r\n\r\n<section data-state='slide_functor'>\r\n    <div>\r\n        <h3></h3>\r\n        <p class='yellow'>Functors | Example</p>\r\n    </div>\r\n    <div class=\"eWrapper\">\r\n        <div class=\"eBox\">\r\n            <ngx-monaco-editor class=\"mEditor\" [options]=\"jsEditorOptions\" [(ngModel)]=\"mainCode\">\r\n            </ngx-monaco-editor>\r\n            <button type=\"button\" class=\"btn btn-success run\" (click)=\"run()\">Run</button>\r\n            <br/>\r\n        </div>\r\n        <div class=\"eBox\">\r\n            <ngx-monaco-editor class=\"mEditorOut\" [options]=\"htmlEditorOptions\" [(ngModel)]=\"consoleOutput\">\r\n            </ngx-monaco-editor>\r\n        </div>\r\n    </div>\r\n</section>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/slides/functors.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FunctorComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_http_service__ = __webpack_require__("../../../../../src/app/app.http.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_reveal_js__ = __webpack_require__("../../../../reveal.js/js/reveal.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_reveal_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_reveal_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__config_json__ = __webpack_require__("../../../../../config.json");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__config_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__config_json__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var FunctorComponent = (function () {
+    function FunctorComponent(httpService, appCom) {
+        this.httpService = httpService;
+        this.appCom = appCom;
+        this.jsEditorOptions = {};
+        this.htmlEditorOptions = {};
+        this.gistUrl = __WEBPACK_IMPORTED_MODULE_4__config_json__["gist"].apiUrl;
+        this.initEditor();
+    }
+    FunctorComponent.prototype.ngOnInit = function () {
+        var that = this;
+        __WEBPACK_IMPORTED_MODULE_3_reveal_js__["addEventListener"]('slide_functor', function () {
+            that.initEditor();
+            that.getCode('acb11e073f0270d8cd2be5a931dfe23a').then(function (val) { return that.mainCode = String(val); });
+        }, false);
+    };
+    FunctorComponent.prototype.initEditor = function () {
+        this.jsEditorOptions = Object.assign({}, __WEBPACK_IMPORTED_MODULE_4__config_json__["jsEditorOptions"]);
+        this.htmlEditorOptions = Object.assign({}, __WEBPACK_IMPORTED_MODULE_4__config_json__["htmlEditorOptions"]);
+    };
+    FunctorComponent.prototype.getCode = function (gistId) {
+        var _this = this;
+        var url = this.gistUrl + gistId + '/raw';
+        return new Promise(function (resolve, reject) {
+            _this.httpService.get(url).subscribe(function (val) { resolve(val); }, function (err) { reject(err); });
+        });
+    };
+    FunctorComponent.prototype.run = function () {
+        var _this = this;
+        this.appCom.fpEval(this.mainCode).then(function (val) { return _this.consoleOutput = String(val); });
+    };
+    return FunctorComponent;
+}());
+FunctorComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: '[app-functor]',
+        template: __webpack_require__("../../../../../src/app/slides/functors.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/slides/slides.component.css")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__app_http_service__["a" /* HttpService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__app_http_service__["a" /* HttpService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__app_component__["a" /* AppComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__app_component__["a" /* AppComponent */]) === "function" && _b || Object])
+], FunctorComponent);
+
+var _a, _b;
+//# sourceMappingURL=functors.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/slides/hof.component.html":
 /***/ (function(module, exports) {
 
@@ -703,6 +872,86 @@ var _a, _b;
 
 /***/ }),
 
+/***/ "../../../../../src/app/slides/monads.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<section>\r\n    <div>\r\n        <h3 class='yellow'>Monad</h3>\r\n        <p>\r\n            Monads apply a function that returns a wrapped value to a wrapped value.\r\n        </p>\r\n    </div>\r\n</section>\r\n\r\n<section>\r\n    <div>\r\n        <p>Let's see an example. Maybe monad</p>\r\n        <img class='functorImg' src=\"assets/images/monad_maybe.png\">\r\n    </div>\r\n</section>\r\n\r\n<section>\r\n    <div>\r\n        <p>\r\n            <i>half</i> is a function that only works on even numbers</p>\r\n        <img src=\"assets/images/monad_half_1.png\">\r\n    </div>\r\n</section>\r\n\r\n<section>\r\n    <div>\r\n        <p>If we feed it a wrapped value?</p>\r\n        <img src=\"assets/images/monad_half_2.png\">\r\n    </div>\r\n</section>\r\n\r\n<section>\r\n    <div>\r\n        <p>You need FlatMap a.k.a Bind function</p>\r\n        <img class='monadImg' src=\"assets/images/monad_in_action.png\">\r\n    </div>\r\n</section>\r\n\r\n<section>\r\n    <div>\r\n        <p>We can chain these calls</p>\r\n        <img class='monadImg1' src=\"assets/images/monad_example.png\">\r\n    </div>\r\n</section>\r\n\r\n<section data-state='slide_monad'>\r\n    <div>\r\n        <h3></h3>\r\n        <p class='yellow'>Monads | Example</p>\r\n    </div>\r\n    <div class=\"eWrapper\">\r\n        <div class=\"eBox\">\r\n            <ngx-monaco-editor class=\"mEditor\" [options]=\"jsEditorOptions\" [(ngModel)]=\"mainCode\">\r\n            </ngx-monaco-editor>\r\n            <button type=\"button\" class=\"btn btn-success run\" (click)=\"run()\">Run</button>\r\n            <br/>\r\n        </div>\r\n        <div class=\"eBox\">\r\n            <ngx-monaco-editor class=\"mEditorOut\" [options]=\"htmlEditorOptions\" [(ngModel)]=\"consoleOutput\">\r\n            </ngx-monaco-editor>\r\n        </div>\r\n    </div>\r\n</section>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/slides/monads.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MonadComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_http_service__ = __webpack_require__("../../../../../src/app/app.http.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_reveal_js__ = __webpack_require__("../../../../reveal.js/js/reveal.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_reveal_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_reveal_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__config_json__ = __webpack_require__("../../../../../config.json");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__config_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__config_json__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var MonadComponent = (function () {
+    function MonadComponent(httpService, appCom) {
+        this.httpService = httpService;
+        this.appCom = appCom;
+        this.jsEditorOptions = {};
+        this.htmlEditorOptions = {};
+        this.gistUrl = __WEBPACK_IMPORTED_MODULE_4__config_json__["gist"].apiUrl;
+        this.initEditor();
+    }
+    MonadComponent.prototype.ngOnInit = function () {
+        var that = this;
+        __WEBPACK_IMPORTED_MODULE_3_reveal_js__["addEventListener"]('slide_monad', function () {
+            that.initEditor();
+            that.getCode('ba3f8af8219debfa364a7c6a2fedba94').then(function (val) { return that.mainCode = String(val); });
+        }, false);
+    };
+    MonadComponent.prototype.initEditor = function () {
+        this.jsEditorOptions = Object.assign({}, __WEBPACK_IMPORTED_MODULE_4__config_json__["jsEditorOptions"]);
+        this.htmlEditorOptions = Object.assign({}, __WEBPACK_IMPORTED_MODULE_4__config_json__["htmlEditorOptions"]);
+    };
+    MonadComponent.prototype.getCode = function (gistId) {
+        var _this = this;
+        var url = this.gistUrl + gistId + '/raw';
+        return new Promise(function (resolve, reject) {
+            _this.httpService.get(url).subscribe(function (val) { resolve(val); }, function (err) { reject(err); });
+        });
+    };
+    MonadComponent.prototype.run = function () {
+        var _this = this;
+        this.appCom.fpEval(this.mainCode).then(function (val) { return _this.consoleOutput = String(val); });
+    };
+    return MonadComponent;
+}());
+MonadComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: '[app-monad]',
+        template: __webpack_require__("../../../../../src/app/slides/monads.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/slides/slides.component.css")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__app_http_service__["a" /* HttpService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__app_http_service__["a" /* HttpService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__app_component__["a" /* AppComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__app_component__["a" /* AppComponent */]) === "function" && _b || Object])
+], MonadComponent);
+
+var _a, _b;
+//# sourceMappingURL=monads.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/slides/pure.functions.component.html":
 /***/ (function(module, exports) {
 
@@ -791,7 +1040,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".mEditor {\r\n    height: 400px;\r\n    text-align: left;\r\n    font-size: 40px;\r\n    overflow: hidden;\r\n}\r\n.mEditorOut {\r\n    height: 400px;\r\n    text-align: left;\r\n    font-size: 40px;\r\n    overflow: hidden;\r\n}\r\n.monaco-editor { overflow: hidden; }\r\n\r\n.btn.run {\r\n    float: left;\r\n    margin-left: 10px;\r\n    margin-top: 10px;\r\n}\r\n\r\n.yellow {\r\n    color: #F8DC3D;\r\n}\r\n\r\n.eWrapper {\r\n    display: -ms-grid;\r\n    display: grid;\r\n    -ms-grid-columns: 2fr 1fr;\r\n        grid-template-columns: 2fr 1fr;\r\n    grid-gap: 5px;\r\n}\r\n\r\n.eBox {\r\n    padding: 5px;\r\n}\r\n\r\n.mrWrapper {\r\n    display: -ms-grid;\r\n    display: grid;\r\n    -ms-grid-columns: (1fr)[4];\r\n        grid-template-columns: repeat(4, 1fr);\r\n    grid-auto-rows: 200px;\r\n}\r\n.mrWrapperReducefn {\r\n    display: -ms-grid;\r\n    display: grid;\r\n    -ms-grid-columns: 1fr 3fr;\r\n        grid-template-columns: 1fr 3fr;\r\n    grid-auto-rows: 200px; \r\n}\r\n.mrWrapperReducefnOut {\r\n    display: -ms-grid;\r\n    display: grid;\r\n    -ms-grid-columns: 3fr 1fr;\r\n        grid-template-columns: 3fr 1fr;\r\n    grid-auto-rows: 200px; \r\n}\r\n.mrBox {\r\n    padding: 1px;\r\n}\r\n.mrBox img {\r\n    width: 100px;\r\n    height: 100px;\r\n    background: none !important;\r\n    border: none !important;\r\n    margin-top: 10px !important;\r\n}\r\n.mrWrapperReducefn img {\r\n    width: auto !important;\r\n}\r\n\r\n.fnWrapper {\r\n    display: -ms-grid;\r\n    display: grid;\r\n    -ms-grid-columns: (1fr)[2];\r\n        grid-template-columns: repeat(2, 1fr);\r\n    grid-auto-rows: 100px;\r\n}\r\n.fn img {\r\n    width: 300px;\r\n    height: 190px;\r\n    background: none !important;\r\n    border: none !important;\r\n    margin-top: 10px !important;\r\n}\r\n.fnBox img {\r\n    width: 200px;\r\n    height: 190px;\r\n    background: none !important;\r\n    border: none !important;\r\n    margin-top: 10px !important;\r\n}\r\n\r\n.categoryImg {\r\n    height: 250px;\r\n    background: none !important;\r\n    border: none !important;\r\n    margin-top: 10px !important;\r\n}\r\n.pfImg {\r\n    height: 500px;\r\n    background: none !important;\r\n    border: none !important;\r\n    margin-top: 10px !important;\r\n}", ""]);
+exports.push([module.i, ".mEditor {\r\n    height: 400px;\r\n    text-align: left;\r\n    font-size: 40px;\r\n    overflow: hidden;\r\n}\r\n.mEditorOut {\r\n    height: 400px;\r\n    text-align: left;\r\n    font-size: 40px;\r\n    overflow: hidden;\r\n}\r\n.monaco-editor { overflow: hidden; }\r\n\r\n.btn.run {\r\n    float: left;\r\n    margin-left: 10px;\r\n    margin-top: 10px;\r\n}\r\n\r\n.yellow {\r\n    color: #F8DC3D;\r\n}\r\n\r\nsection img {\r\n    background: none !important;\r\n    border: none !important;\r\n    margin-top: 10px !important;\r\n}\r\n\r\n.eWrapper {\r\n    display: -ms-grid;\r\n    display: grid;\r\n    -ms-grid-columns: 2fr 1fr;\r\n        grid-template-columns: 2fr 1fr;\r\n    grid-gap: 5px;\r\n}\r\n\r\n.eBox {\r\n    padding: 5px;\r\n}\r\n\r\n.mrWrapper {\r\n    display: -ms-grid;\r\n    display: grid;\r\n    -ms-grid-columns: (1fr)[4];\r\n        grid-template-columns: repeat(4, 1fr);\r\n    grid-auto-rows: 200px;\r\n}\r\n.mrWrapperReducefn {\r\n    display: -ms-grid;\r\n    display: grid;\r\n    -ms-grid-columns: 1fr 3fr;\r\n        grid-template-columns: 1fr 3fr;\r\n    grid-auto-rows: 200px; \r\n}\r\n.mrWrapperReducefnOut {\r\n    display: -ms-grid;\r\n    display: grid;\r\n    -ms-grid-columns: 3fr 1fr;\r\n        grid-template-columns: 3fr 1fr;\r\n    grid-auto-rows: 200px; \r\n}\r\n.mrBox {\r\n    padding: 1px;\r\n}\r\n.mrBox img {\r\n    width: 100px;\r\n    height: 100px;\r\n}\r\n.mrWrapperReducefn img {\r\n    width: auto !important;\r\n}\r\n\r\n.fnWrapper {\r\n    display: -ms-grid;\r\n    display: grid;\r\n    -ms-grid-columns: (1fr)[2];\r\n        grid-template-columns: repeat(2, 1fr);\r\n    grid-auto-rows: 100px;\r\n}\r\n.fn img {\r\n    width: 300px;\r\n    height: 190px;\r\n}\r\n.fnBox img {\r\n    width: 200px;\r\n    height: 190px;\r\n}\r\n\r\n.categoryImg {\r\n    height: 250px;\r\n}\r\n.pfImg {\r\n    height: 500px;\r\n}\r\n.functorImg {\r\n    height: 300px;\r\n}\r\n.monadImg {\r\n    height: 410px;\r\n}\r\n.monadImg1 {\r\n    height: 510px;\r\n}\r\n.applicativeWrapper {\r\n    display: -ms-grid;\r\n    display: grid;\r\n    -ms-grid-columns: (1fr)[2];\r\n        grid-template-columns: repeat(2, 1fr);\r\n    grid-auto-rows: 300px;\r\n}\r\n", ""]);
 
 // exports
 
