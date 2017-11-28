@@ -81,6 +81,15 @@ section img {
 .categoryImg {
     height: 250px;
 }
+.categoryImgI {
+    height: 300px;
+}
+.categoryImgC {
+    height: 350px;
+}
+.categoryImgA {
+    height: 500px;
+}
 .pfImg {
     height: 500px;
 }

@@ -27,7 +27,7 @@ export class MonadComponent {
         var that = this;
         Reveal.addEventListener('slide_monad', function () {
             that.initEditor();
-            that.getCode('40ff93efe1cbcf320e36be46d4fb7bff').then(
+            that.getCode('ba3f8af8219debfa364a7c6a2fedba94').then(
                 (val) => that.mainCode = String(val)
             );
         }, false);
