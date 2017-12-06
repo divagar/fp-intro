@@ -1,3 +1,11 @@
-.slide_intro div {
-    margin-top: 320px;
+.slide_intro img {
+    width: 200px;
+    height: 175px;
+    background: none !important;
+    border: none !important;
+    margin-top: 10px !important;
+}
+.slide_intro div p {
+    text-align: right;
+    font-style: italic;
 }
