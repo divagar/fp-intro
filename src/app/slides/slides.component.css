@@ -97,8 +97,17 @@ pre.pf {
     font-size: 22px; 
 }
 
+.curryWrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 400px;
+}
+.curry_p {
+    font-size: 25px; 
+}
+
 .curryCode {
-    width: 75% !important
+    width: 100% !important;
 }
 
 .categoryImg {
