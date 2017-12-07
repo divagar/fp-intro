@@ -62,7 +62,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\n.reveal {\n    font-family: 'Quicksand', sans-serif !important;\n}\n\n.reveal .slides {\n    width: 1280px !important;\n}\n\n.yellow {\n    color: #F8DC3D !important;\n}", ""]);
+exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\n.reveal {\n    font-family: 'Quicksand', sans-serif !important;\n}\n\n.reveal .slides {\n    width: 1280px !important;\n}\n\n.yellow {\n    color: #F8DC3D !important;\n}\n\n.reveal pre {\n    width: 50% !important;\n}\n.reveal pre code {\n    background: transparent !important;\n}", ""]);
 
 // exports
 

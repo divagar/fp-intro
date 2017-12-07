@@ -32,7 +32,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".slide_intro div {\r\n    margin-top: 320px;\r\n}", ""]);
+exports.push([module.i, ".slide_intro img {\r\n    width: 200px;\r\n    height: 175px;\r\n    background: none !important;\r\n    border: none !important;\r\n    margin-top: 10px !important;\r\n}\r\n.slide_intro div p {\r\n    text-align: right;\r\n    font-style: italic;\r\n}", ""]);
 
 // exports
 
@@ -45,7 +45,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"reveal\">\n  <div class=\"slides\">\n\n    <section class=\"slide_intro\" data-background=\"assets/images/fp_js.jpg\" data-background-size=\"100px\">\n      <div>\n        <h3>Introduction to Functional Programming</h3>\n      </div>\n    </section>\n\n    <section>\n      <div>\n        <h3 class='yellow'>Composition\n          <br/>Abstraction</h3>\n      </div>\n    </section>\n\n    <section>\n      <div>\n        <h3 class='yellow'>Functional Programming is a programming paradigm</h3>\n        <p>like imperative (procedural) programming or object oriented programming</p>\n      </div>\n    </section>\n\n    <section>\n      <div>\n        <h3 class='yellow'>ObjectOriented Programming</h3>\n        <p>\n          Composition of object\n          <br> Abstraction over the behaviour of each object\n        </p>\n      </div>\n    </section>\n\n    <section>\n      <div>\n        <h3 class='yellow'>Functional Programming</h3>\n        <p>\n          Composition of function\n          <br/> Abstraction over mathematical laws\n        </p>\n      </div>\n    </section>\n\n    <section app-cat data-state='slide_cat' class='slide_cat'>\n    </section>\n\n    <section app-fn data-state='slide_fn' class='slide_fn'>\n    </section>\n\n    <section app-pf class='slide_pf'>\n    </section>\n\n    <section app-hof class='slide_hof'>\n    </section>\n\n    <section app-mr class='slide_mr'>\n    </section>\n\n    <section app-curry class='slide_curry'>\n    </section>\n\n    <section app-com class='slide_com'>\n    </section>\n\n    <section>\n      <div>\n        <h3 class='yellow'>Type Composition</h3>\n        <p>\n            We will learn this via FP design pattern like Functor, Applicative and Monad\n        </p>\n      </div>\n    </section>\n\n    <section app-functor class='slide_functor'>\n    </section>\n\n    <section app-applicative class='slide_applicative'>\n    </section>\n\n    <section app-monad class='slide_monad'>\n    </section>\n\n    <section>\n      <p>Funcational programming offers higher order abstraction, which drive significantly greater re-use and clean code.\n      </p>\n      <h3 class='yellow'>The development world is becoming more functional. Learn it.</h3>\n    </section>\n\n  </div>\n</div>"
+module.exports = "<div class=\"reveal\">\n  <div class=\"slides\">\n\n    <section class=\"slide_intro\">\n      <div class='intro'>\n        <img src=\"assets/images/fp_js.jpg\">\n      </div>\n      <div>\n        <h3>Introduction to Functional Programming</h3>\n        <br/>\n        <p>Divagar & Jenny</p>\n      </div>\n    </section>\n\n    <section>\n      <div>\n        <h3 class='yellow'>Composition\n          <br/>Abstraction</h3>\n      </div>\n    </section>\n\n    <section app-paradigm class='slide_paradigm'>\n    </section>\n\n    <section>\n      <div>\n        <h3 class='yellow'>Theoretical Models of\n          <br/>Funcational Programming</h3>\n        <p>Lambda Calculus & Category Theory</p>\n      </div>\n    </section>\n\n    <section app-lambda data-state='slide_lambda' class='slide_lambda'>\n    </section>\n\n    <section app-cat data-state='slide_cat' class='slide_cat'>\n    </section>\n\n    <section app-fn data-state='slide_fn' class='slide_fn'>\n    </section>\n\n    <section app-pf class='slide_pf'>\n    </section>\n\n    <section app-hof class='slide_hof'>\n    </section>\n\n    <section app-mr class='slide_mr'>\n    </section>\n\n    <section app-curry class='slide_curry'>\n    </section>\n\n    <section app-com class='slide_com'>\n    </section>\n\n    <section>\n      <div>\n        <h3 class='yellow'>Type Composition</h3>\n        <p>\n          We will learn this via FP design pattern like Functor, Applicative and Monad\n        </p>\n      </div>\n    </section>\n\n    <section app-functor class='slide_functor'>\n    </section>\n\n    <section app-applicative class='slide_applicative'>\n    </section>\n\n    <section app-monad class='slide_monad'>\n    </section>\n\n    <section>\n      <p>Funcational programming offers higher order abstraction, which drive significantly greater re-use and clean code.\n      </p>\n      <h3 class='yellow'>The development world is becoming more functional. Learn it.</h3>\n    </section>\n\n  </div>\n</div>"
 
 /***/ }),
 
@@ -230,22 +230,26 @@ LSService = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_http_service__ = __webpack_require__("../../../../../src/app/app.http.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_ls_service__ = __webpack_require__("../../../../../src/app/app.ls.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__slides_category_component__ = __webpack_require__("../../../../../src/app/slides/category.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__slides_function_component__ = __webpack_require__("../../../../../src/app/slides/function.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__slides_pure_functions_component__ = __webpack_require__("../../../../../src/app/slides/pure.functions.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__slides_hof_component__ = __webpack_require__("../../../../../src/app/slides/hof.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__slides_mapreduce_component__ = __webpack_require__("../../../../../src/app/slides/mapreduce.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__slides_currying_component__ = __webpack_require__("../../../../../src/app/slides/currying.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__slides_compose_component__ = __webpack_require__("../../../../../src/app/slides/compose.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__slides_functors_component__ = __webpack_require__("../../../../../src/app/slides/functors.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__slides_applicatives_component__ = __webpack_require__("../../../../../src/app/slides/applicatives.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__slides_monads_component__ = __webpack_require__("../../../../../src/app/slides/monads.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__slides_paradigm_component__ = __webpack_require__("../../../../../src/app/slides/paradigm.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__slides_lambda_component__ = __webpack_require__("../../../../../src/app/slides/lambda.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__slides_category_component__ = __webpack_require__("../../../../../src/app/slides/category.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__slides_function_component__ = __webpack_require__("../../../../../src/app/slides/function.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__slides_pure_functions_component__ = __webpack_require__("../../../../../src/app/slides/pure.functions.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__slides_hof_component__ = __webpack_require__("../../../../../src/app/slides/hof.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__slides_mapreduce_component__ = __webpack_require__("../../../../../src/app/slides/mapreduce.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__slides_currying_component__ = __webpack_require__("../../../../../src/app/slides/currying.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__slides_compose_component__ = __webpack_require__("../../../../../src/app/slides/compose.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__slides_functors_component__ = __webpack_require__("../../../../../src/app/slides/functors.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__slides_applicatives_component__ = __webpack_require__("../../../../../src/app/slides/applicatives.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__slides_monads_component__ = __webpack_require__("../../../../../src/app/slides/monads.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -273,16 +277,18 @@ AppModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["L" /* NgModule */])({
         declarations: [
             __WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* AppComponent */],
-            __WEBPACK_IMPORTED_MODULE_8__slides_category_component__["a" /* CategoryComponent */],
-            __WEBPACK_IMPORTED_MODULE_9__slides_function_component__["a" /* FunctionComponent */],
-            __WEBPACK_IMPORTED_MODULE_10__slides_pure_functions_component__["a" /* PureFunctionsComponent */],
-            __WEBPACK_IMPORTED_MODULE_11__slides_hof_component__["a" /* HOFComponent */],
-            __WEBPACK_IMPORTED_MODULE_12__slides_mapreduce_component__["a" /* MRComponent */],
-            __WEBPACK_IMPORTED_MODULE_13__slides_currying_component__["a" /* CurryingComponent */],
-            __WEBPACK_IMPORTED_MODULE_14__slides_compose_component__["a" /* ComposeComponent */],
-            __WEBPACK_IMPORTED_MODULE_15__slides_functors_component__["a" /* FunctorComponent */],
-            __WEBPACK_IMPORTED_MODULE_16__slides_applicatives_component__["a" /* ApplicativeComponent */],
-            __WEBPACK_IMPORTED_MODULE_17__slides_monads_component__["a" /* MonadComponent */]
+            __WEBPACK_IMPORTED_MODULE_8__slides_paradigm_component__["a" /* ParadigmComponent */],
+            __WEBPACK_IMPORTED_MODULE_9__slides_lambda_component__["a" /* LambdaComponent */],
+            __WEBPACK_IMPORTED_MODULE_10__slides_category_component__["a" /* CategoryComponent */],
+            __WEBPACK_IMPORTED_MODULE_11__slides_function_component__["a" /* FunctionComponent */],
+            __WEBPACK_IMPORTED_MODULE_12__slides_pure_functions_component__["a" /* PureFunctionsComponent */],
+            __WEBPACK_IMPORTED_MODULE_13__slides_hof_component__["a" /* HOFComponent */],
+            __WEBPACK_IMPORTED_MODULE_14__slides_mapreduce_component__["a" /* MRComponent */],
+            __WEBPACK_IMPORTED_MODULE_15__slides_currying_component__["a" /* CurryingComponent */],
+            __WEBPACK_IMPORTED_MODULE_16__slides_compose_component__["a" /* ComposeComponent */],
+            __WEBPACK_IMPORTED_MODULE_17__slides_functors_component__["a" /* FunctorComponent */],
+            __WEBPACK_IMPORTED_MODULE_18__slides_applicatives_component__["a" /* ApplicativeComponent */],
+            __WEBPACK_IMPORTED_MODULE_19__slides_monads_component__["a" /* MonadComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -699,7 +705,7 @@ var _a, _b;
 /***/ "../../../../../src/app/slides/hof.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<section>\r\n    <div>\r\n        <h3 class='yellow'>High Order Function</h3>\r\n    </div>\r\n</section>\r\n\r\n<section data-state='slide_hof'>\r\n    <div>\r\n        <p class='yellow'>Functions which take functions as input or return functions as output</p>\r\n    </div>\r\n    <div class=\"eWrapper\">\r\n        <div class=\"eBox\">\r\n            <ngx-monaco-editor class=\"mEditor\" [options]=\"jsEditorOptions\" [(ngModel)]=\"mainCode\">\r\n            </ngx-monaco-editor>\r\n            <button type=\"button\" class=\"btn btn-success run\" (click)=\"run()\">Run</button>\r\n            <br/>\r\n        </div>\r\n        <div class=\"eBox\">\r\n            <ngx-monaco-editor class=\"mEditorOut\" [options]=\"htmlEditorOptions\" [(ngModel)]=\"consoleOutput\">\r\n            </ngx-monaco-editor>\r\n        </div>\r\n    </div>\r\n</section>"
+module.exports = "<section>\r\n    <div>\r\n        <h3 class='yellow'>Higher Order Function</h3>\r\n    </div>\r\n</section>\r\n\r\n<section data-state='slide_hof'>\r\n    <div>\r\n        <p class='yellow'>Functions which take functions as input or return functions as output</p>\r\n    </div>\r\n    <div class=\"eWrapper\">\r\n        <div class=\"eBox\">\r\n            <ngx-monaco-editor class=\"mEditor\" [options]=\"jsEditorOptions\" [(ngModel)]=\"mainCode\">\r\n            </ngx-monaco-editor>\r\n            <button type=\"button\" class=\"btn btn-success run\" (click)=\"run()\">Run</button>\r\n            <br/>\r\n        </div>\r\n        <div class=\"eBox\">\r\n            <ngx-monaco-editor class=\"mEditorOut\" [options]=\"htmlEditorOptions\" [(ngModel)]=\"consoleOutput\">\r\n            </ngx-monaco-editor>\r\n        </div>\r\n    </div>\r\n</section>"
 
 /***/ }),
 
@@ -776,10 +782,47 @@ var _a, _b;
 
 /***/ }),
 
+/***/ "../../../../../src/app/slides/lambda.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<section>\r\n    <div>\r\n        <h3 class='yellow'>Lambda Calculus λ</h3>\r\n        <p>\r\n            Universal model of computation based on function application\r\n        </p>\r\n    </div>\r\n</section>\r\n\r\n<section>\r\n    <div>\r\n        <h3 class='yellow'>Lambda Calculus features <br/> Functions are first-class</h3>\r\n        <p>functions can be used as inputs to other functions, and functions can return functions</p>\r\n    </div>\r\n</section>\r\n\r\n<section>\r\n    <div>\r\n        <h3 class='yellow'>Lambda Calculus features <br/> Anonymous Functions</h3>\r\n        <p>Functions are always anonymous</p>\r\n        <pre><code class=\"javascript\">\r\n            let add2 = (x) => x + 2;</code></pre>\r\n    </div>\r\n</section>\r\n\r\n<section>\r\n    <div>\r\n        <h3 class='yellow'>Lambda Calculus features <br/> Unary Functions</h3>\r\n        <p>Functions in lambda calculus only accept a single input.\r\n            <br/> If you need more than one parameter, the function will take one input and return a new function that takes the\r\n            next.\r\n        </p>\r\n        <pre><code class=\"javascript\">\r\n                (x, y) => x + y;\r\n                (x) => (y) => x + y;\r\n            </code></pre>\r\n    </div>\r\n</section>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/slides/lambda.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LambdaComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var LambdaComponent = (function () {
+    function LambdaComponent() {
+    }
+    return LambdaComponent;
+}());
+LambdaComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: '[app-lambda]',
+        template: __webpack_require__("../../../../../src/app/slides/lambda.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/slides/slides.component.css")]
+    })
+], LambdaComponent);
+
+//# sourceMappingURL=lambda.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/slides/mapreduce.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<section data-state='slide_mr'>\r\n    <div>\r\n        <p class='yellow'>Higher Order Function | Example</p>\r\n    </div>\r\n    <ngx-monaco-editor class=\"mEditor\" [options]=\"jsEditorOptions\" [(ngModel)]=\"mainCode\">\r\n    </ngx-monaco-editor>\r\n</section>\r\n\r\n<section data-state='slide_mr_1'>\r\n    <div>\r\n        <p class='yellow'>Using a for-loop we would write something like this</p>\r\n    </div>\r\n    <div class=\"eWrapper\">\r\n        <div class=\"eBox\">\r\n            <ngx-monaco-editor class=\"mEditor\" [options]=\"jsEditorOptions\" [(ngModel)]=\"mainCode_1\">\r\n            </ngx-monaco-editor>\r\n            <button type=\"button\" class=\"btn btn-success run\" (click)=\"run_1()\">Run</button>\r\n            <br/>\r\n        </div>\r\n        <div class=\"eBox\">\r\n            <ngx-monaco-editor class=\"mEditorOut\" [options]=\"htmlEditorOptions\" [(ngModel)]=\"consoleOutput_1\">\r\n            </ngx-monaco-editor>\r\n        </div>\r\n    </div>\r\n</section>\r\n\r\n<section>\r\n    <div>\r\n        <h3>Map</h3>\r\n        <p class='yellow'>A map fn takes a list and a function as input. The function is applied to every element of the list generating an\r\n            output list.\r\n        </p>\r\n    </div>\r\n</section>\r\n<section>\r\n    <div class=\"mrWrapper\">\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/pomegranate.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/orange.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/watermelon.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/lemon.png\">\r\n        </div>\r\n    </div>\r\n</section>\r\n<section>\r\n    <div class=\"mrWrapper\">\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/pomegranate.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/orange.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/watermelon.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/lemon.png\">\r\n        </div>\r\n    </div>\r\n    <div class=\"mrWrapper\">\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/map.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/map.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/map.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/map.png\">\r\n        </div>\r\n    </div>\r\n</section>\r\n<section>\r\n    <div class=\"mrWrapper\">\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/pomegranate.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/orange.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/watermelon.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/lemon.png\">\r\n        </div>\r\n    </div>\r\n    <div class=\"mrWrapper\">\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/map.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/map.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/map.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/map.png\">\r\n        </div>\r\n    </div>\r\n    <div class=\"mrWrapper\">\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/pomegranate_1.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/orange_1.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/watermelon_1.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/lemon_1.png\">\r\n        </div>\r\n    </div>\r\n</section>\r\n\r\n\r\n<section>\r\n    <div>\r\n        <h3>Reduce</h3>\r\n        <p class='yellow'>A reduce fn takes a list, an initial value and a fn as input and The function is applied to every element accumulating\r\n            the output in each step.\r\n        </p>\r\n    </div>\r\n</section>\r\n<section>\r\n    <div class=\"mrWrapper\">\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/pomegranate.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/orange.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/watermelon.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/lemon.png\">\r\n        </div>\r\n    </div>\r\n</section>\r\n<section>\r\n    <div class=\"mrWrapper\">\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/pomegranate.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/orange.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/watermelon.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/lemon.png\">\r\n        </div>\r\n    </div>\r\n    <div class=\"mrWrapperReducefn\">\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/fruit-bowl.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/reduce.png\">\r\n        </div>\r\n    </div>\r\n</section>\r\n<section>\r\n    <div class=\"mrWrapper\">\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/pomegranate.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/orange.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/watermelon.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/lemon.png\">\r\n        </div>\r\n    </div>\r\n    <div class=\"mrWrapperReducefn\">\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/fruit-bowl.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/reduce.png\">\r\n        </div>\r\n    </div>\r\n    <div class=\"mrWrapperReducefnOut\">\r\n        <div class=\"mrBox\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/fruit-salad.png\">\r\n        </div>\r\n    </div>\r\n</section>\r\n\r\n<section data-state='slide_mr_2'>\r\n    <div>\r\n        <p class='yellow'>Using a Higher Order Functions like Map and Reduce</p>\r\n    </div>\r\n    <div class=\"eWrapper\">\r\n        <div class=\"eBox\">\r\n            <ngx-monaco-editor class=\"mEditor\" [options]=\"jsEditorOptions\" [(ngModel)]=\"mainCode_2\">\r\n            </ngx-monaco-editor>\r\n            <button type=\"button\" class=\"btn btn-success run\" (click)=\"run_2()\">Run</button>\r\n            <br/>\r\n        </div>\r\n        <div class=\"eBox\">\r\n            <ngx-monaco-editor class=\"mEditorOut\" [options]=\"htmlEditorOptions\" [(ngModel)]=\"consoleOutput_2\">\r\n            </ngx-monaco-editor>\r\n        </div>\r\n    </div>\r\n</section>"
+module.exports = "<section data-state='slide_mr'>\r\n    <div>\r\n        <p class='yellow'>Higher Order Function | Example</p>\r\n    </div>\r\n    <ngx-monaco-editor class=\"mEditor\" [options]=\"jsEditorOptions\" [(ngModel)]=\"mainCode\">\r\n    </ngx-monaco-editor>\r\n</section>\r\n\r\n<section data-state='slide_mr_1'>\r\n    <div>\r\n        <p class='yellow'>Using a for-loop we would write something like this</p>\r\n    </div>\r\n    <div class=\"eWrapper\">\r\n        <div class=\"eBox\">\r\n            <ngx-monaco-editor class=\"mEditor\" [options]=\"jsEditorOptions\" [(ngModel)]=\"mainCode_1\">\r\n            </ngx-monaco-editor>\r\n            <button type=\"button\" class=\"btn btn-success run\" (click)=\"run_1()\">Run</button>\r\n            <br/>\r\n        </div>\r\n        <div class=\"eBox\">\r\n            <ngx-monaco-editor class=\"mEditorOut\" [options]=\"htmlEditorOptions\" [(ngModel)]=\"consoleOutput_1\">\r\n            </ngx-monaco-editor>\r\n        </div>\r\n    </div>\r\n</section>\r\n\r\n<section>\r\n    <div>\r\n        <h3>Map</h3>\r\n        <p class='yellow'>A map fn takes a list and a function as input. The function is applied to every element of the list generating an\r\n            output list.\r\n        </p>\r\n    </div>\r\n</section>\r\n<section>\r\n    <div class=\"mrWrapper\">\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/pomegranate.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/orange.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/watermelon.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/lemon.png\">\r\n        </div>\r\n    </div>\r\n</section>\r\n<section>\r\n    <div class=\"mrWrapper\">\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/pomegranate.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/orange.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/watermelon.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/lemon.png\">\r\n        </div>\r\n    </div>\r\n    <div class=\"mrWrapper\">\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/map.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/map.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/map.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/map.png\">\r\n        </div>\r\n    </div>\r\n</section>\r\n<section>\r\n    <div class=\"mrWrapper\">\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/pomegranate.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/orange.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/watermelon.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/lemon.png\">\r\n        </div>\r\n    </div>\r\n    <div class=\"mrWrapper\">\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/map.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/map.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/map.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/map.png\">\r\n        </div>\r\n    </div>\r\n    <div class=\"mrWrapper\">\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/pomegranate_1.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/orange_1.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/watermelon_1.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/lemon_1.png\">\r\n        </div>\r\n    </div>\r\n</section>\r\n\r\n\r\n<section>\r\n    <div>\r\n        <h3>Reduce (fold)</h3>\r\n        <p class='yellow'>A reduce fn takes a list, an initial value and a fn as input and The function is applied to every element accumulating\r\n            the output in each step.\r\n        </p>\r\n    </div>\r\n</section>\r\n<section>\r\n    <div class=\"mrWrapper\">\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/pomegranate.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/orange.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/watermelon.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/lemon.png\">\r\n        </div>\r\n    </div>\r\n</section>\r\n<section>\r\n    <div class=\"mrWrapper\">\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/pomegranate.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/orange.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/watermelon.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/lemon.png\">\r\n        </div>\r\n    </div>\r\n    <div class=\"mrWrapperReducefn\">\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/fruit-bowl.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/reduce.png\">\r\n        </div>\r\n    </div>\r\n</section>\r\n<section>\r\n    <div class=\"mrWrapper\">\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/pomegranate.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/orange.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/watermelon.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/lemon.png\">\r\n        </div>\r\n    </div>\r\n    <div class=\"mrWrapperReducefn\">\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/fruit-bowl.png\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/reduce.png\">\r\n        </div>\r\n    </div>\r\n    <div class=\"mrWrapperReducefnOut\">\r\n        <div class=\"mrBox\">\r\n        </div>\r\n        <div class=\"mrBox\">\r\n            <img src=\"assets/images/fruit-salad.png\">\r\n        </div>\r\n    </div>\r\n</section>\r\n\r\n<section data-state='slide_mr_2'>\r\n    <div>\r\n        <p class='yellow'>Using a Higher Order Functions like Map and Reduce</p>\r\n    </div>\r\n    <div class=\"eWrapper\">\r\n        <div class=\"eBox\">\r\n            <ngx-monaco-editor class=\"mEditor\" [options]=\"jsEditorOptions\" [(ngModel)]=\"mainCode_2\">\r\n            </ngx-monaco-editor>\r\n            <button type=\"button\" class=\"btn btn-success run\" (click)=\"run_2()\">Run</button>\r\n            <br/>\r\n        </div>\r\n        <div class=\"eBox\">\r\n            <ngx-monaco-editor class=\"mEditorOut\" [options]=\"htmlEditorOptions\" [(ngModel)]=\"consoleOutput_2\">\r\n            </ngx-monaco-editor>\r\n        </div>\r\n    </div>\r\n</section>"
 
 /***/ }),
 
@@ -949,6 +992,91 @@ MonadComponent = __decorate([
 
 var _a, _b;
 //# sourceMappingURL=monads.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/slides/paradigm.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<section>\r\n    <div>\r\n        <h3 class='yellow'>Programming Paradigm</h3>\r\n    </div>\r\n</section>\r\n\r\n<section>\r\n    <div>\r\n        <p class='yellow'>Classification of various paradigms\r\n            <br/> is based a particular style of programming</p>\r\n        <img class='pfImg' src=\"assets/images/paradigm.png\">\r\n    </div>\r\n</section>\r\n\r\n<section>\r\n    <div>\r\n        <h3 class='yellow'>Imperative Programming Paradigm</h3>\r\n        <p>\r\n            A programming style where computation is expressed as a sequence of statements which change state\r\n        </p>\r\n    </div>\r\n</section>\r\n\r\n<section>\r\n    <div>\r\n        <h3 class='yellow'>Imperative Programming Paradigm</h3>\r\n        <p>\r\n            Based on Von Neumann machine with registers and modifiable memory. The memory is manipulated by the program through variables\r\n            and assignments\r\n        </p>\r\n    </div>\r\n</section>\r\n\r\n<section>\r\n    <div>\r\n        <h3 class='yellow'>Imperative Programming Paradigm</h3>\r\n        <p>\r\n            Order of execution is important and primary control flow are loops, conditions, function (sub-routine or method) calls\r\n        </p>\r\n    </div>\r\n</section>\r\n\r\n<section>\r\n    <div>\r\n        <h3 class='yellow'>Object-Oriented Programming Paradigm</h3>\r\n        <p>\r\n            A programming style where computation is expressed as a composition of objects which combine data and code\r\n        </p>\r\n    </div>\r\n</section>\r\n\r\n<section>\r\n    <div>\r\n        <h3 class='yellow'>Declarative Programming Paradigm</h3>\r\n        <p>\r\n            A computational model where the problem is described in terms of ‘what’ and not ‘how’\r\n        </p>\r\n    </div>\r\n</section>\r\n\r\n<section>\r\n    <div>\r\n        <h3 class='yellow'>Funcational Programming Paradigm</h3>\r\n        <p>\r\n            A programming style where evaluation of expressions are emphasized over execution of commands. <br/>Mutable state is mostly avoided\r\n        </p>\r\n    </div>\r\n</section>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/slides/paradigm.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ParadigmComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_http_service__ = __webpack_require__("../../../../../src/app/app.http.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_reveal_js__ = __webpack_require__("../../../../reveal.js/js/reveal.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_reveal_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_reveal_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__config_json__ = __webpack_require__("../../../../../config.json");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__config_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__config_json__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var ParadigmComponent = (function () {
+    function ParadigmComponent(httpService, appCom) {
+        this.httpService = httpService;
+        this.appCom = appCom;
+        this.jsEditorOptions = {};
+        this.htmlEditorOptions = {};
+        this.gistUrl = __WEBPACK_IMPORTED_MODULE_4__config_json__["gist"].apiUrl;
+        this.initEditor();
+    }
+    ParadigmComponent.prototype.ngOnInit = function () {
+        var that = this;
+        __WEBPACK_IMPORTED_MODULE_3_reveal_js__["addEventListener"]('slide_paradigm', function () {
+            that.initEditor();
+            that.getCode('4c3b68f11e404db9431bafca17644e7d').then(function (val) { return that.mainCode = String(val); });
+        }, false);
+    };
+    ParadigmComponent.prototype.initEditor = function () {
+        this.jsEditorOptions = Object.assign({}, __WEBPACK_IMPORTED_MODULE_4__config_json__["jsEditorOptions"]);
+        this.htmlEditorOptions = Object.assign({}, __WEBPACK_IMPORTED_MODULE_4__config_json__["htmlEditorOptions"]);
+    };
+    ParadigmComponent.prototype.getCode = function (gistId) {
+        var _this = this;
+        var url = this.gistUrl + gistId + '/raw';
+        return new Promise(function (resolve, reject) {
+            _this.httpService.get(url).subscribe(function (val) { resolve(val); }, function (err) { reject(err); });
+        });
+    };
+    ParadigmComponent.prototype.run = function () {
+        var _this = this;
+        this.appCom.fpEval(this.mainCode).then(function (val) { return _this.consoleOutput = String(val); });
+    };
+    ParadigmComponent.prototype.codeHgl = function () {
+        jQuery('pre code').each(function (i, block) {
+            hljs.highlightBlock(block);
+        });
+    };
+    return ParadigmComponent;
+}());
+ParadigmComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: '[app-paradigm]',
+        template: __webpack_require__("../../../../../src/app/slides/paradigm.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/slides/slides.component.css")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__app_http_service__["a" /* HttpService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__app_http_service__["a" /* HttpService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__app_component__["a" /* AppComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__app_component__["a" /* AppComponent */]) === "function" && _b || Object])
+], ParadigmComponent);
+
+var _a, _b;
+//# sourceMappingURL=paradigm.component.js.map
 
 /***/ }),
 
