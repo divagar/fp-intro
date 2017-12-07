@@ -4,6 +4,9 @@ import { HttpService } from '../app.http.service';
 import * as Reveal from 'reveal.js';
 import * as appConfig from '../../../config.json';
 
+declare var hljs: any;
+declare var jQuery: any;
+
 @Component({
     selector: '[app-paradigm]',
     templateUrl: './paradigm.component.html',
@@ -18,7 +21,7 @@ export class ParadigmComponent {
     htmlEditorOptions = {};
 
     constructor(private httpService: HttpService,
-                private appCom: AppComponent) {
+        private appCom: AppComponent) {
         this.gistUrl = (<any>appConfig).gist.apiUrl;
         this.initEditor();
     }
@@ -52,5 +55,11 @@ export class ParadigmComponent {
         this.appCom.fpEval(this.mainCode).then(
             (val) => this.consoleOutput = String(val)
         );
+    }
+
+    codeHgl() {
+        jQuery('pre code').each(function (i, block) {
+            hljs.highlightBlock(block);
+        });
     }
 }

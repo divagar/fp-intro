@@ -10,3 +10,7 @@
 .yellow {
     color: #F8DC3D !important;
 }
+
+.reveal pre code {
+    background: transparent !important;
+}
