@@ -14,11 +14,11 @@ export class MRComponent {
 
     gistUrl: string;
     mainCode: string;
-    mainCode_1: string;
-    mainCode_2: string;
+    mainCode_map: string;
+    mainCode_reduce: string;
     consoleOutput: string;
-    consoleOutput_1: string;
-    consoleOutput_2: string;
+    consoleOutput_map: string;
+    consoleOutput_reduce: string;
     jsEditorOptions = {};
     htmlEditorOptions = {};
 
@@ -36,16 +36,16 @@ export class MRComponent {
                 (val) => that.mainCode = String(val)
             );
         }, false);
-        Reveal.addEventListener('slide_mr_1', function () {
+        Reveal.addEventListener('slide_mr_map', function () {
             that.initEditor();
-            that.getCode('db012916dd89f58fdc032e4cb3ed898b').then(
-                (val) => that.mainCode_1 = String(val)
+            that.getCode('d9ec1b0a2274af389e53dc0cc9f526a2').then(
+                (val) => that.mainCode_map = String(val)
             );
         }, false);
-        Reveal.addEventListener('slide_mr_2', function () {
+        Reveal.addEventListener('slide_mr_reduce', function () {
             that.initEditor();
-            that.getCode('deb73a0eddceaa84f2d7502ba44520ba').then(
-                (val) => that.mainCode_2 = String(val)
+            that.getCode('52cad12fa78bd6cc91ec8946b106ea0e').then(
+                (val) => that.mainCode_reduce = String(val)
             );
         }, false);
     }
@@ -70,14 +70,14 @@ export class MRComponent {
             (val) => this.consoleOutput = String(val)
         );
     }
-    run_1() {
-        this.appCom.fpEval(this.mainCode_1).then(
-            (val) => this.consoleOutput_1 = String(val)
+    run_map() {
+        this.appCom.fpEval(this.mainCode_map).then(
+            (val) => this.consoleOutput_map = String(val)
         );
     }
-    run_2() {
-        this.appCom.fpEval(this.mainCode_2).then(
-            (val) => this.consoleOutput_2 = String(val)
+    run_reduce() {
+        this.appCom.fpEval(this.mainCode_reduce).then(
+            (val) => this.consoleOutput_reduce = String(val)
         );
     }
 }

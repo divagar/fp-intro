@@ -2,26 +2,8 @@
     <div>
         <p class='yellow'>Higher Order Function | Example</p>
     </div>
-    <ngx-monaco-editor class="mEditor" [options]="jsEditorOptions" [(ngModel)]="mainCode">
-    </ngx-monaco-editor>
-</section>
-
-<section data-state='slide_mr_1'>
-    <div>
-        <p class='yellow'>Using a for-loop we would write something like this</p>
-    </div>
-    <div class="eWrapper">
-        <div class="eBox">
-            <ngx-monaco-editor class="mEditor" [options]="jsEditorOptions" [(ngModel)]="mainCode_1">
-            </ngx-monaco-editor>
-            <button type="button" class="btn btn-success run" (click)="run_1()">Run</button>
-            <br/>
-        </div>
-        <div class="eBox">
-            <ngx-monaco-editor class="mEditorOut" [options]="htmlEditorOptions" [(ngModel)]="consoleOutput_1">
-            </ngx-monaco-editor>
-        </div>
-    </div>
+    <!-- <ngx-monaco-editor class="mEditor" [options]="jsEditorOptions" [(ngModel)]="mainCode">
+    </ngx-monaco-editor> -->
 </section>
 
 <section>
@@ -123,6 +105,23 @@
     </div>
 </section>
 
+<section data-state='slide_mr_map'>
+    <div>
+        <p class='yellow'>Map | Example</p>
+    </div>
+    <div class="eWrapper">
+        <div class="eBox">
+            <ngx-monaco-editor class="mEditor" [options]="jsEditorOptions" [(ngModel)]="mainCode_map">
+            </ngx-monaco-editor>
+            <button type="button" class="btn btn-success run" (click)="run_map()">Run</button>
+            <br/>
+        </div>
+        <div class="eBox">
+            <ngx-monaco-editor class="mEditorOut" [options]="htmlEditorOptions" [(ngModel)]="consoleOutput_map">
+            </ngx-monaco-editor>
+        </div>
+    </div>
+</section>
 
 <section>
     <div>
@@ -204,19 +203,19 @@
     </div>
 </section>
 
-<section data-state='slide_mr_2'>
+<section data-state='slide_mr_reduce'>
     <div>
-        <p class='yellow'>Using a Higher Order Functions like Map and Reduce</p>
+        <p class='yellow'>Reduce | Example</p>
     </div>
     <div class="eWrapper">
         <div class="eBox">
-            <ngx-monaco-editor class="mEditor" [options]="jsEditorOptions" [(ngModel)]="mainCode_2">
+            <ngx-monaco-editor class="mEditor" [options]="jsEditorOptions" [(ngModel)]="mainCode_reduce">
             </ngx-monaco-editor>
-            <button type="button" class="btn btn-success run" (click)="run_2()">Run</button>
+            <button type="button" class="btn btn-success run" (click)="run_reduce()">Run</button>
             <br/>
         </div>
         <div class="eBox">
-            <ngx-monaco-editor class="mEditorOut" [options]="htmlEditorOptions" [(ngModel)]="consoleOutput_2">
+            <ngx-monaco-editor class="mEditorOut" [options]="htmlEditorOptions" [(ngModel)]="consoleOutput_reduce">
             </ngx-monaco-editor>
         </div>
     </div>
