@@ -12,6 +12,7 @@ import * as appConfig from '../../../config.json';
 
 export class CurryingComponent {
 
+    /*
     gistUrl: string;
     mainCode: string;
     consoleOutput: string;
@@ -54,5 +55,5 @@ export class CurryingComponent {
             (val) => this.consoleOutput = String(val)
         );
     }
-
+    */
 }

@@ -97,6 +97,10 @@ pre.pf {
     font-size: 22px; 
 }
 
+.curryCode {
+    width: 75% !important
+}
+
 .categoryImg {
     height: 250px;
 }
