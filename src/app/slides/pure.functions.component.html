@@ -7,7 +7,41 @@
 <section>
     <div>
         <p class='yellow'>A function that, given the same input, will always return the same output and does not have any observable side effect.</p>
-        <img class='pfImg' src="assets/images/pf.png">
+        <div class='pfnWrapper'>
+            <div class='pf'>
+                <img class='pfImg' src="assets/images/pf.png">
+            </div>
+            <pre class='pf'><code class="javascript">
+                    let abcd = ['a', 'b', 'c', 'd', 'e']
+                    console.log(abcd.slice(2,4))
+                    //[ 'c', 'd' ]
+                    console.log(abcd)
+                    //[ 'a', 'b', 'c', 'd', 'e' ]
+                    console.log(abcd.splice(2,2))
+                    //[ 'c', 'd' ]
+                    console.log(abcd)
+                    //[ 'a', 'b', 'e' ]
+                </code>
+            </pre>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div>
+        <h3 class='yellow'>Properties of Pure fuctions</h3>
+        <div>
+            <p class="pfProperties">
+                <span class='yellow'>1. Immutability</span>
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;In Pure FP, X = X + 1 is not possible
+                <br/><span class='yellow'>2. No side effects</span>
+                <br/><span class='yellow'>3. Referrential Transparency</span>
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;let plusOne = (x) => x+1;
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;plusOne(5) can be replaced by "6"
+                <br/><span class='yellow'>4. Parallel Code</span>
+                <br/>
+            </p>
+        </div>
     </div>
 </section>
 
