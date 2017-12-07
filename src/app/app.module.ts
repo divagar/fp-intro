@@ -7,6 +7,7 @@ import { MonacoEditorModule } from 'ngx-monaco-editor';
 import { HttpService } from './app.http.service';
 import { LSService } from './app.ls.service';
 import { AppComponent } from './app.component';
+import { programComponent } from './slides/program.component';
 import { ParadigmComponent } from './slides/paradigm.component';
 import { LambdaComponent } from './slides/lambda.component';
 import { CategoryComponent } from './slides/category.component';
@@ -23,6 +24,7 @@ import { MonadComponent } from './slides/monads.component';
 @NgModule({
   declarations: [
     AppComponent,
+    programComponent,
     ParadigmComponent,
     LambdaComponent,
     CategoryComponent,
