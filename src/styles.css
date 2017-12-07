@@ -11,6 +11,9 @@
     color: #F8DC3D !important;
 }
 
+.reveal pre {
+    width: 50% !important;
+}
 .reveal pre code {
     background: transparent !important;
 }

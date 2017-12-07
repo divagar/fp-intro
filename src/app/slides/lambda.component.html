@@ -1,0 +1,38 @@
+<section>
+    <div>
+        <h3 class='yellow'>Lambda Calculus λ</h3>
+        <p>
+            Universal model of computation based on function application
+        </p>
+    </div>
+</section>
+
+<section>
+    <div>
+        <h3 class='yellow'>Lambda Calculus features <br/> Functions are first-class</h3>
+        <p>functions can be used as inputs to other functions, and functions can return functions</p>
+    </div>
+</section>
+
+<section>
+    <div>
+        <h3 class='yellow'>Lambda Calculus features <br/> Anonymous Functions</h3>
+        <p>Functions are always anonymous</p>
+        <pre><code class="javascript">
+            let add2 = (x) => x + 2;</code></pre>
+    </div>
+</section>
+
+<section>
+    <div>
+        <h3 class='yellow'>Lambda Calculus features <br/> Unary Functions</h3>
+        <p>Functions in lambda calculus only accept a single input.
+            <br/> If you need more than one parameter, the function will take one input and return a new function that takes the
+            next.
+        </p>
+        <pre><code class="javascript">
+                (x, y) => x + y;
+                (x) => (y) => x + y;
+            </code></pre>
+    </div>
+</section>
