@@ -104,7 +104,9 @@
         </div>
     </div>
 
-    <div class='credit'>Image Credit: <a href="https://www.flaticon.com">flaticon.com</a></div>
+    <div class='credit'>Image Credit:
+        <a href="https://www.flaticon.com">flaticon.com</a>
+    </div>
 </section>
 
 <section data-state='slide_mr_map'>
@@ -204,7 +206,9 @@
         </div>
     </div>
 
-    <div class='credit'>Image Credit: <a href="https://www.flaticon.com">flaticon.com</a></div>
+    <div class='credit'>Image Credit:
+        <a href="https://www.flaticon.com">flaticon.com</a>
+    </div>
 </section>
 
 <section data-state='slide_mr_reduce'>
@@ -222,5 +226,35 @@
             <ngx-monaco-editor class="mEditorOut" [options]="htmlEditorOptions" [(ngModel)]="consoleOutput_reduce">
             </ngx-monaco-editor>
         </div>
+    </div>
+</section>
+
+<section>
+    <div>
+        <p class='yellow'>MapReduce Chain</p>
+    </div>
+    <div>
+        <pre class='mpChain'>
+            <code class="javascript">
+            let lines = ["My name is Jenny",
+            "We work in the Chrome team in Intel on the KBL Platform",
+            "We worked on a new debug automation framework which sued FP extensively",
+            "We are here to talk about what I learned in the process",
+            "Hope you all enjoy this talk",
+            "Thanks Jenny & Divagar"]
+   
+            let partialCounts = lines.map((line) => line.split(' ').map(word => [{{ '{' }}[word]: 1}]))
+            partialCounts = _.flattenDepth(partialCounts, 2)
+   
+            let wordCount = partialCounts.reduce((acc, partialCounts) => {{ '{' }}
+                                           let word = Object.keys(partialCounts)[0]
+                                           acc[word] = acc[word] ? acc[word] + 1 : 1
+                                           return acc
+                                        }, {{ '{' }} })
+   
+            console.log(wordCount);
+            </code>
+        </pre>
+
     </div>
 </section>

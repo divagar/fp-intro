@@ -153,3 +153,11 @@ pre.pf {
     text-align: left;
     margin-top: 15px;
 }
+
+.mpChain {
+    width: 100% !important;
+}
+
+pre.mpChain code {
+    max-height: 600px !important;
+}
