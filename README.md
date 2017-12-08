@@ -6,5 +6,7 @@ Link to the presentation: https://divagar.github.io/fp-intro/
 
 
 
-Icon Credit: www.flaticon.com
+Image Credit:
+flaticon.com
+mathsisfun.com
 Functor, Applicative, Monads images from: adit.io
