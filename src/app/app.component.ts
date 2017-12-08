@@ -19,7 +19,7 @@ export class AppComponent {
 
   ngOnInit() {
     Reveal.initialize({
-      controls: false,
+      controls: true,
       progress: true,
       history: true,
       center: true,

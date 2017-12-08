@@ -64,6 +64,10 @@ section img {
     width: auto !important;
 }
 
+.proImg {
+    height: 300px;
+}
+
 .fnWrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
